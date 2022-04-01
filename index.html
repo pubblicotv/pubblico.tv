@@ -155,50 +155,35 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<!-- contact -->
-		<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
-		<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-		<script>
-		  /* paste this line in verbatim */
-		  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-		  /* customize formbutton below*/     
-		  formbutton("create", {
-		    action: "https://formspree.io/f/xeqnzwvd",
-		    title: "Contatti",
-		    fields: [
-		      { 
-			type: "text", 
-			label: "Nome e Cognome:", 
-			name: "nominativo",
-			required: true,
-			placeholder: "Nome e Cognome"
-		      },
-			  { 
-			type: "text", 
-			label: "Cellulare:", 
-			name: "cellulare",
-			required: true,
-			placeholder: "cellulare"
-		      },
-		      { 
-			type: "email", 
-			label: "Email:", 
-			name: "email",
-			required: true,
-			placeholder: "email"
-		      },
-		      { type: "submit", value: "Invia" }      
-		    ],
-		    styles: {
-		      title: {
-			backgroundColor: "gray"
-		      },
-		      button: {
-			backgroundColor: "gray"
-		      }
-		    }
-		  });
-		</script>
-		<!-- contact -->
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "110939661570364");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/it_IT/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 	</body>
 </html>
