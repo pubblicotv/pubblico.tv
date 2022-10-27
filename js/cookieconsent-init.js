@@ -31,7 +31,7 @@ window.addEventListener('load', function () {
                     title: 'Gestisci consenso cookies',
                     description: 'Ciao, questo sito utilizza cookie essenziali per garantirne il corretto funzionamento e cookie analitici per capire come interagisci con esso. I cookie analitici saranno impostati solo previa approvazione. <a aria-label="Cookie policy" class="cc-link" href="#">Leggi cookie policy</a>',
                     primary_btn: {
-                        text: 'Accetta tutti',
+                        text: 'Accetta',
                         role: 'accept_all'              // 'accept_selected' or 'accept_all'
                     },
                     secondary_btn: {
@@ -40,10 +40,10 @@ window.addEventListener('load', function () {
                     }
                 },
                 settings_modal: {
-                    title: 'Preferenze cookie',
+                    title: 'Preferenze cookies',
                     save_settings_btn: 'Salva impostazioni',
-                    accept_all_btn: 'Accetta tutti',
-                    reject_all_btn: 'Rifiuta tutti',       // optional, [v.2.5.0 +]
+                    accept_all_btn: 'Accetta',
+                    reject_all_btn: 'Rifiuta',       // optional, [v.2.5.0 +]
                     cookie_table_headers: [
                         {col1: 'Nome'},
                         {col2: 'Dominio'},
@@ -53,19 +53,19 @@ window.addEventListener('load', function () {
                     ],
                     blocks: [
                         {
-                            title: 'Utilizzo cookie',
-                            description: 'Il sito usa i cookie per garantire le funzionalità di base del sito Web e per migliorare la tua esperienza online. Puoi scegliere per ciascuna categoria di accettare/rifiutare quando vuoi.'
+                            title: 'Utilizzo cookies',
+                            description: 'Il sito usa i cookies per garantire le funzionalità di base del sito Web e per migliorare la tua esperienza online. Puoi scegliere per ciascuna categoria di accettare/rifiutare quando vuoi.'
                         }, {
                             title: 'Cookies strettamente necessari',
-                            description: 'Questi cookie sono essenziali per il corretto funzionamento del  sito web. Senza questi cookie, il sito Web non funzionerebbe correttamente.',
+                            description: 'Questi cookies sono essenziali per il corretto funzionamento del  sito web. Senza questi cookies, il sito Web non funzionerebbe correttamente.',
                             toggle: {
                                 value: 'necessary',
                                 enabled: true,
                                 readonly: true
                             }
                         }, {
-                            title: 'Cookie Analitici',
-                            description: 'Questi cookie raccolgono informazioni su come utilizzi il sito web, quali pagine hai visitato e quali link hai cliccato. Tutti i dati sono resi anonimi e non possono essere utilizzati per identificarti.',
+                            title: 'Cookies Analitici',
+                            description: 'Questi cookies raccolgono informazioni su come utilizzi il sito web, quali pagine hai visitato e quali link hai cliccato. Tutti i dati sono resi anonimi e non possono essere utilizzati per identificarti.',
                             toggle: {
                                 value: 'analytics',
                                 enabled: true,
@@ -76,21 +76,21 @@ window.addEventListener('load', function () {
                                     col1: '^_ga',
                                     col2: 'google.com',
                                     col3: '2 anni',
-                                    col4: 'Utilizzato per distinguere gli utenti',
-                                    col5: 'Cookie persistente',
+                                    col4: 'Registra un ID univoco utilizzato per generare dati statistici su come il visitatore utilizza il sito',
+                                    col5: 'Cookie di Sessione',
                                     is_regex: true
                                 },
                                 {
-                                    col1: '_ga_<container-id>',
+                                    col1: '_ga_LQEWM6JRNT',
                                     col2: 'google.com',
                                     col3: '2 anni',
-                                    col4: 'Utilizzato per persistere lo stato della sessione',
-                                    col5: 'Cookie persistente'
+                                    col4: 'Utilizzato da Google Analytics per raccogliere dati sul numero di volte che un utente ha visitato il sito, la prima visita e la visita più recente',
+                                    col5: 'Cookie di Sessione'
                                 }
                             ]
                         }, {
                             title: 'Maggiori informazioni',
-                            description: 'Per qualsiasi domanda in relazione alla politica sui cookie e alle tue scelte,  <a class="cc-link" href="https://www.pubblico.tv">contattami</a>.',
+                            description: 'Per qualsiasi domanda in relazione alla politica sui cookies e alle tue scelte,  <a class="cc-link" href="https://www.pubblico.tv">contattami</a>.',
                         }
                     ]
                 }
