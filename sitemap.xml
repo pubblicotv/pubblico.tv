@@ -3,9 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
 	<url>
 		<loc>https://www.pubblico.tv/</loc>
-		<image:image>
-			<image:loc>https://www.pubblico.tv/images/logo-pubblicotv.png</image:loc>
-		</image:image>
 		<changefreq>weekly</changefreq>
 		<lastmod>2022-10-27</lastmod>
 		<priority>1.00</priority>
