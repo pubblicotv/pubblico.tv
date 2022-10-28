@@ -1,1 +1,1 @@
-
+Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive attualmente in onda? Pubblico TV fornisce e gestisce qualsiasi tipo di pubblico televisivo a Roma per le maggiori reti televisive italiane.
