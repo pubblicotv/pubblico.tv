@@ -54,7 +54,7 @@ window.addEventListener('load', function () {
                     blocks: [
                         {
                             title: 'Utilizzo cookies',
-                            description: 'Il sito usa i cookie per garantire le funzionalità di base del sito Web e per migliorare la tua esperienza online. Puoi scegliere per ciascuna categoria di accettare/rifiutare quando vuoi.'
+                            description: 'Il sito usa i cookies per garantire le funzionalità di base del sito Web e per migliorare la tua esperienza online. Puoi scegliere per ciascuna categoria di accettare/rifiutare quando vuoi.'
                         }, {
                             title: 'Cookies strettamente necessari',
                             description: 'Questi cookies sono essenziali per il corretto funzionamento del  sito web. Senza questi cookies, il sito Web non funzionerebbe correttamente.',
@@ -64,7 +64,7 @@ window.addEventListener('load', function () {
                                 readonly: true
                             }
                         }, {
-                            title: 'Cookie Analitici',
+                            title: 'Cookies Analitici',
                             description: 'Questi cookies raccolgono informazioni su come utilizzi il sito web, quali pagine hai visitato e quali link hai cliccato. Tutti i dati sono resi anonimi e non possono essere utilizzati per identificarti.',
                             toggle: {
                                 value: 'analytics',
@@ -77,20 +77,20 @@ window.addEventListener('load', function () {
                                     col2: 'google.com',
                                     col3: '2 anni',
                                     col4: 'Utilizzato per distinguere gli utenti',
-                                    col5: 'Cookie persistente',
+                                    col5: 'Cookie di sessione',
                                     is_regex: true
                                 },
                                 {
                                     col1: '_ga_LQEWM6JRNT',
                                     col2: 'google.com',
                                     col3: '2 anni',
-                                    col4: 'Utilizzato per persistere lo stato della sessione',
-                                    col5: 'Cookie persistente'
+                                    col4: 'Utilizzato da Google Analytics per raccogliere dati sul numero di volte che un utente ha visitato il sito, la prima visita e la visita più recente',
+                                    col5: 'Cookie di sessione'
                                 }
                             ]
                         }, {
                             title: 'Maggiori informazioni',
-                            description: 'Per qualsiasi domanda in relazione alla politica sui cookies e alle tue scelte,  <a class="cc-link" href="https://www.pubblico.tv">contattami</a>.',
+                            description: 'Per qualsiasi domanda in relazione alla politica sui cookies e alle tue scelte,  <a class="cc-link" href="https://www.pubblico.tv">contattaci</a>.',
                         }
                     ]
                 }
