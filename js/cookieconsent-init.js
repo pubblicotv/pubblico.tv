@@ -90,7 +90,7 @@ window.addEventListener('load', function () {
                             ]
                         }, {
                             title: 'Maggiori informazioni',
-                            description: 'Per qualsiasi domanda in relazione alla politica sui cookies e alle tue scelte,  <a class="cc-link" href="https://www.pubblico.tv">contattami</a>.',
+                            description: 'Per qualsiasi domanda in relazione alla politica sui cookies e alle tue scelte,  <a class="cc-link" href="https://www.pubblico.tv">contattaci</a>.',
                         }
                     ]
                 }
