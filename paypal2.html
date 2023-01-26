@@ -1,46 +1,228 @@
-<div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=AfGH4lYdAQLfJhaZwFP2f-7xTszkkcghUgx42owhkc-g5w3clmpBaHIjSydnrltFOMUE7Txt_tzlbS7-&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
-  <script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'horizontal',
-          label: 'paypal',
-          
-        },
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Pubblico TV</title>
+		<meta name="Description" content="Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive in onda? Pubblico TV gestisce pubblico per i maggiori canali italiani." />
+		<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+		<link rel="canonical" href="https://www.pubblico.tv" />
+		<meta property="og:title" content="Pubblico TV" />
+		<meta property="og:description" content="Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive in onda? Pubblico TV gestisce pubblico per i maggiori canali italiani." />
+		<meta property="og:url" content="https://www.pubblico.tv" />
+		<meta property="og:locale" content="it_IT" />
+		<meta property="og:image" content="https://www.pubblico.tv/images/logo-pubblicotv-ig-post.png" />
+		<meta property="og:image:width" content="692" />
+		<meta property="og:image:height" content="692" />
+		<meta property="og:image:alt" content="logo Pubblico TV" />
+		<meta property="og:image:type" content="image/png" />		
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Pubblico TV" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Pubblico TV" />
+		<meta name="twitter:description" content="Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive in onda? Pubblico TV gestisce pubblico per i maggiori canali italiani." />
+		<meta name="twitter:image" content="https://www.pubblico.tv/images/logo-pubblicotv-ig-post.png" />
+		<meta name="twitter:label1" content="Tempo di lettura" />
+		<meta name="twitter:data1" content="1 minuto" />		
+		<meta name="facebook-domain-verification" content="4xps5kqe2nbhoc54g8hepoqamc1q9w" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/cookieconsent.css" media="print" onload="this.media='all'">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{"description":"test","amount":{"currency_code":"EUR","value":0.1}}]
-          });
-        },
+		<!-- Header -->
+			<header id="header">
+				<div class="content">
+					<h1>Benvenuto!</h1>
+					<p>Vuoi partecipare come pubblico in studio<br /> alle principali trasmissioni televisive <br />attualmente in onda?<br />
+					Invia la tua adesione a <a href="mailto:info@pubblico.tv">info@pubblico.tv</a></p>
+					<ul class="actions">
+						<li><a href="#two" class="button icon solid fa-chevron-down scrolly">Prossimi appuntamenti</a></li>
+					</ul>
+				</div>
+				<img src="images/logo-rett-small-pubblico.tv.png" alt="" />
+			</header>
+		<!-- Two -->
+			<section id="two" class="wrapper">
+				<div class="inner alt">
+					<section class="spotlight">
+						<div class="image"><img src="images/amici-serale-2022-sito.png" alt="Amici" /></div>
+						<div class="content">
+							<h3>Amici</h3>
+							<p>
+								<ul class="alt">
+									<li><strong>mercoledi 8 febbraio</strong></li>
+									<li><i>(per esigenze televisive la registrazione potrebbe essere posticipata a giovedi 9 febbraio)</i></li>
+									<li><strong>Viaggio andata e ritorno con pullman gran turismo da Nardò (LE)</strong></li>
+									<li>Ingresso riservato anche minorenni (dai 14 anni compiuti)</li>
+									<li>Invia subito la tua adesione a <a href="mailto:info@pubblico.tv">info@pubblico.tv</a></li>
+									<li><strong>N.B. procedi con l'acquisto solo se hai già avuto conferma della prenotazione via whatsapp/telefono</strong></li>
+									<li>Procedendo con l'acquisto dichiari di aver letto e di accettare i nostri <a href="https://www.pubblico.tv/termini-e-condizioni.html">"Termini e condizioni"</a><li>
+									<li>Acquista adesso tramite carta di credito su piattaforma STRIPE</li>
+									<li>
+										<a href="https://buy.stripe.com/28o6qa0cE5Kt4SI000"><img src="images/paynowstripe00.png" width="60%"></a>
+									</li>
+									<li>oppure tramite PAYPAL:</li>
+									<li>
+										<div id="smart-button-container">
+											  <div style="text-align: center;">
+												<div id="paypal-button-container"></div>
+											  </div>
+										</div>									
+									</li>
+								</ul>
+								<ul class="icons">
+									<li><a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+									<li><a href="https://www.facebook.com/romapubblicotv" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://m.me/romapubblicotv" class="icon brands fa-facebook-messenger"><span class="label">Messenger</span></a></li>
+									<li><a href="https://twitter.com/romapubblicotv" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/pubblico.roma" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+							</p>
+						</div>
+					</section>	
 
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(orderData) {
-            
-            // Full available details
-            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+					<section class="spotlight">
+						<div class="image"><img src="images/logo-gfvip.png" alt="GF" /></div>
+						<div class="content">
+							<h3>Grande Fratello VIP</h3>
+							<p>
+								<ul class="alt">
+									<li><strong>lunedi 30 gennaio ore 18.30</strong></li>
+									<li><strong>Cinecittà Studios, Via Vincenzo Lamaro 30 - Roma</strong></li>
+									<li>Ingresso riservato solo maggiorenni</li>
+									<li>Invia subito la tua adesione a <a href="mailto:info@pubblico.tv">info@pubblico.tv</a></li>
+								</ul>
+								<ul class="icons">
+									<li><a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+									<li><a href="https://www.facebook.com/romapubblicotv" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://m.me/romapubblicotv" class="icon brands fa-facebook-messenger"><span class="label">Messenger</span></a></li>
+									<li><a href="https://twitter.com/romapubblicotv" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/pubblico.roma" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>								
+							</p>
+						</div>
+					</section>
 
-            // Show a success message within this page, e.g.
-            const element = document.getElementById('paypal-button-container');
-            element.innerHTML = '';
-            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+				</div>
+			</section>
+			<section id="four" class="wrapper">
+				<div class="inner">
+					<header class="major">
+						<h2>Contatti</h2>
+					</header>
+						<form id="fs-frm" name="pubblicotv-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xeqnzwvd" method="post">
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="name" id="name" value="" placeholder="Nome" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="cognome" id="cognome" value="" placeholder="Cognome" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="email" name="email-address" id="email-address" value="" placeholder="Email" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="cellulare" id="cellulare" value="" placeholder="Cellulare" />
+								</div>
+								<div class="col-12">
+									<select name="programma-tv" id="programma-tv">
+										<option value="" selected="">Seleziona trasmissione...</option>
+										<option value="AMICI">Amici</option>
+										<option value="UOD">C'è posta per te</option>
+										<option value="GF">Grande Fratello Vip</option>
+										<option value="MCS">Maurizio Costanzo Show</option>
+										<option value="NEA">Non è l'Arena</option>
+										<option value="UOD">Uomini e Donne</option>
+										<option value="altro">altro</option>
+									</select>
+								</div>
+								<div class="col-12">
+									<textarea name="message" id="message" placeholder="" rows="6"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions special">
+										<li><input type="submit" value="Invia messaggio" class="primary" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+				</div>
+			</section>	
+			
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+					<li><a href="https://www.facebook.com/romapubblicotv" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://m.me/romapubblicotv" class="icon brands fa-facebook-messenger"><span class="label">Messenger</span></a></li>
+					<li><a href="https://twitter.com/romapubblicotv" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.instagram.com/pubblico.roma" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+				<p><a href="https://www.pubblico.tv/termini-e-condizioni.html">Termini e condizioni</a> - <a href="https://www.pubblico.tv/cookie-policy-ue.html">Cookie policy</a> - <a href="https://www.pubblico.tv/privacy-policy-ue.html">Privacy policy</a></p>
+				<p class="copyright">&copy; Pubblico.TV 2022 &#123;thx @ 4p0n3&#125;</p>
+			</footer>
 
-            // Or go to another URL:  actions.redirect('thank_you.html');
-            
-          });
-        },
+		<!-- Scripts -->
+			<script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-LQEWM6JRNT" defer></script>
+			<script type="text/plain" data-cookiecategory="analytics" defer>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){window.dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-LQEWM6JRNT');
+			</script>
+			<script defer src="assets/js/cookieconsent.js"></script>		
+			<script defer src="assets/js/cookieconsent-init.js"></script>
 
-        onError: function(err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
-    }
-    initPayPalButton();
-  </script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Paypal -->
+			<script src="https://www.paypal.com/sdk/js?client-id=AfGH4lYdAQLfJhaZwFP2f-7xTszkkcghUgx42owhkc-g5w3clmpBaHIjSydnrltFOMUE7Txt_tzlbS7-&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
+			  <script>
+				function initPayPalButton() {
+				  paypal.Buttons({
+					style: {
+					  shape: 'rect',
+					  color: 'gold',
+					  layout: 'horizontal',
+					  label: 'paypal',
+					  
+					},
+
+					createOrder: function(data, actions) {
+					  return actions.order.create({
+						purchase_units: [{"description":"Viaggio a/r per \"Amici\"","amount":{"currency_code":"EUR","value":69}}]
+					  });
+					},
+
+					onApprove: function(data, actions) {
+					  return actions.order.capture().then(function(orderData) {
+						
+						// Full available details
+						console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+						// Show a success message within this page, e.g.
+						const element = document.getElementById('paypal-button-container');
+						element.innerHTML = '';
+						element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+						// Or go to another URL:  actions.redirect('thank_you.html');
+						
+					  });
+					},
+
+					onError: function(err) {
+					  console.log(err);
+					}
+				  }).render('#paypal-button-container');
+				}
+				initPayPalButton();
+			  </script>			
+			<!-- Paypal --> 
+	</body>
+</html>
