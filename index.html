@@ -56,7 +56,6 @@
 									<li><i>(per esigenze televisive la registrazione potrebbe essere posticipata a giovedi 9 febbraio)</i></li>
 									<li><strong>Viaggio andata e ritorno con pullman gran turismo da Nardò (LE)</strong></li>
 									<li>Ingresso riservato anche minorenni (dai 14 anni compiuti)</li>
-									<li>Invia subito la tua adesione a <a href="mailto:info@pubblico.tv">info@pubblico.tv</a></li>
 								</ul>
 								<ul class="icons">
 									<li><a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
@@ -75,7 +74,7 @@
 							<h3>Grande Fratello VIP</h3>
 							<p>
 								<ul class="alt">
-									<li><strong>lunedi 30 gennaio ore 18.30</strong></li>
+									<li><strong>giovedi 9 febbraio ore 18.30</strong></li>
 									<li><strong>Cinecittà Studios, Via Vincenzo Lamaro 30 - Roma</strong></li>
 									<li>Ingresso riservato solo maggiorenni</li>
 									<li>Invia subito la tua adesione a <a href="mailto:info@pubblico.tv">info@pubblico.tv</a></li>
@@ -167,48 +166,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!-- Paypal -->
-			<script src="https://www.paypal.com/sdk/js?client-id=AfGH4lYdAQLfJhaZwFP2f-7xTszkkcghUgx42owhkc-g5w3clmpBaHIjSydnrltFOMUE7Txt_tzlbS7-&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
-			  <script>
-				function initPayPalButton() {
-				  paypal.Buttons({
-					style: {
-					  shape: 'rect',
-					  color: 'gold',
-					  layout: 'horizontal',
-					  label: 'paypal',
-					  
-					},
-
-					createOrder: function(data, actions) {
-					  return actions.order.create({
-						purchase_units: [{"description":"Viaggio a/r per \"Amici\"","amount":{"currency_code":"EUR","value":69}}]
-					  });
-					},
-
-					onApprove: function(data, actions) {
-					  return actions.order.capture().then(function(orderData) {
-						
-						// Full available details
-						console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-						// Show a success message within this page, e.g.
-						const element = document.getElementById('paypal-button-container');
-						element.innerHTML = '';
-						element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-						// Or go to another URL:  actions.redirect('thank_you.html');
-						
-					  });
-					},
-
-					onError: function(err) {
-					  console.log(err);
-					}
-				  }).render('#paypal-button-container');
-				}
-				initPayPalButton();
-			  </script>			
-			<!-- Paypal --> 
 	</body>
 </html>
