@@ -216,7 +216,7 @@
             </div>
             
             <!-- IMPORTANTE: data-netlify="true" abilita Netlify Forms -->
-            <form name="registrazione" method="POST" data-netlify="true" enctype="multipart/form-data" id="registrationForm">
+            <form name="registrazione" method="POST" data-netlify="true" enctype="multipart/form-data" id="registrationForm" action="/successo.html">
                 
                 <!-- Campo nascosto richiesto da Netlify -->
                 <input type="hidden" name="form-name" value="registrazione" />
@@ -324,46 +324,27 @@
         setupImagePreview('foto1', 'preview1');
         setupImagePreview('foto2', 'preview2');
         
-        // Gestione submit form
+        // Gestione submit form (semplificata per Netlify)
         const form = document.getElementById('registrationForm');
         const submitBtn = document.getElementById('submitBtn');
-        const successMsg = document.getElementById('successMessage');
-        const errorMsg = document.getElementById('errorMessage');
         
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
+        form.addEventListener('submit', function(e) {
+            // Non preventDefault - lascia che Netlify gestisca il form
             
-            // Disabilita il pulsante
+            // Disabilita il pulsante per evitare doppi submit
             submitBtn.disabled = true;
             submitBtn.textContent = 'Invio in corso...';
             
-            try {
-                const formData = new FormData(form);
-                
-                const response = await fetch('/', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                if (response.ok) {
-                    successMsg.style.display = 'block';
-                    errorMsg.style.display = 'none';
-                    form.reset();
-                    
-                    // Nascondi le preview
-                    document.getElementById('preview1').style.display = 'none';
-                    document.getElementById('preview2').style.display = 'none';
-                } else {
-                    throw new Error('Errore nel submit');
+            // Validazione veloce prima del submit
+            const requiredInputs = form.querySelectorAll('input[required]');
+            for (let input of requiredInputs) {
+                if (!input.value.trim()) {
+                    e.preventDefault();
+                    alert('Compila tutti i campi obbligatori');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Invia Registrazione';
+                    return;
                 }
-                
-            } catch (error) {
-                console.error('Errore:', error);
-                errorMsg.style.display = 'block';
-                successMsg.style.display = 'none';
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Invia Registrazione';
             }
         });
         
