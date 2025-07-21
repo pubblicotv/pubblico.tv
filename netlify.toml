@@ -1,0 +1,13 @@
+[build]
+  functions = "netlify/functions"
+
+[[plugins]]
+  package = "netlify-plugin-form-submissions"
+
+[dev]
+  functions = "netlify/functions"
+
+# Webhook per form submissions
+[[notifications]]
+  event = "submission-created"
+  url = "/.netlify/functions/form-webhook"
