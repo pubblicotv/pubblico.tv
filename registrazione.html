@@ -324,9 +324,11 @@
         setupImagePreview('foto1', 'preview1');
         setupImagePreview('foto2', 'preview2');
         
-        // Gestione submit form (Netlify gestisce automaticamente l'invio)
+        // Gestione submit form con salvataggio su Google Sheets
         const form = document.getElementById('registrationForm');
         const submitBtn = document.getElementById('submitBtn');
+        const successMsg = document.getElementById('successMessage');
+        const errorMsg = document.getElementById('errorMessage');
         
         form.addEventListener('submit', function(e) {
             // Non preventDefault - lascia che Netlify gestisca il form
@@ -346,7 +348,81 @@
                     return;
                 }
             }
+            
+            // Chiamata asincrona per salvare su Google Sheets
+            // Aspetta un po' per far completare il submit di Netlify
+            setTimeout(async () => {
+                try {
+                    const formData = new FormData(form);
+                    const data = {};
+                    
+                    // Converte FormData in oggetto JSON
+                    for (let [key, value] of formData.entries()) {
+                        if (value instanceof File && value.size > 0) {
+                            // Per i file, salviamo il nome per ora
+                            data[key] = value.name;
+                        } else if (key !== 'form-name') {
+                            // Esclude i campi nascosti di Netlify
+                            data[key] = value;
+                        }
+                    }
+                    
+                    console.log('Salvando su Google Sheets:', data);
+                    
+                    // Chiamata alla Netlify Function
+                    const response = await fetch('/.netlify/functions/save-to-sheets', {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        console.log('✅ Dati salvati su Google Sheets');
+                        // Mostra messaggio di successo se non si è già andati alla pagina di ringraziamento
+                        if (!window.location.href.includes('successo.html')) {
+                            showSuccess('Dati salvati anche su Google Sheets!');
+                        }
+                    } else {
+                        console.error('❌ Errore Google Sheets:', result.error);
+                    }
+                    
+                } catch (error) {
+                    console.error('❌ Errore nel salvataggio Google Sheets:', error);
+                    // Non mostriamo errore all'utente perché Netlify Forms ha comunque funzionato
+                }
+            }, 1500); // Aspetta 1.5 secondi per completare il submit Netlify
         });
+        
+        // Funzioni helper per i messaggi
+        function showSuccess(message = '✅ Dati inviati con successo! Riceverai una conferma via email.') {
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            successMsg.textContent = message;
+            successMsg.style.display = 'block';
+            errorMsg.style.display = 'none';
+            
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        }
+        
+        function showError(message) {
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            errorMsg.textContent = '❌ ' + message;
+            errorMsg.style.display = 'block';
+            successMsg.style.display = 'none';
+            
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
         
         // Validazione real-time
         const requiredInputs = document.querySelectorAll('input[required]');
