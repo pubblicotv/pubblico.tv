@@ -1,0 +1,19 @@
+{
+  "name": "netlify-forms-sheets",
+  "version": "1.0.0",
+  "description": "Form integration with Google Sheets on Netlify",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Build completed'",
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "google-spreadsheet": "^4.1.2"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
