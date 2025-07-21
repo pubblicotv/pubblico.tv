@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Raccolta Dati - Netlify</title>
+    <title>Form Raccolta Dati - Netlify + Google Sheets</title>
     <style>
         * {
             box-sizing: border-box;
@@ -215,7 +215,7 @@
                 ❌ Errore nell'invio. Riprova o contatta l'assistenza.
             </div>
             
-            <!-- IMPORTANTE: data-netlify="true" abilita Netlify Forms -->
+            <!-- FORM con Netlify Functions -->
             <form name="registrazione" method="POST" data-netlify="true" enctype="multipart/form-data" id="registrationForm" action="/successo.html">
                 
                 <!-- Campo nascosto richiesto da Netlify -->
@@ -324,7 +324,7 @@
         setupImagePreview('foto1', 'preview1');
         setupImagePreview('foto2', 'preview2');
         
-        // Gestione submit form (semplificata per Netlify)
+        // Gestione submit form (Netlify gestisce automaticamente l'invio)
         const form = document.getElementById('registrationForm');
         const submitBtn = document.getElementById('submitBtn');
         
