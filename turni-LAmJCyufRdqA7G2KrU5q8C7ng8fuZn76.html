@@ -3,28 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turni TV 2000</title>
+    <title>PUBBLICO.TV - Turni TV 2000</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .container {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            background-color: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
-        h1 {
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-text {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        .brand-text .tv {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .page-title {
             text-align: center;
             color: #333;
             margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 600;
         }
 
         .sheet-container {
@@ -33,9 +85,10 @@
             height: 0;
             padding-bottom: 56.25%; /* Rapporto 16:9 */
             margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .sheet-container iframe {
@@ -47,37 +100,91 @@
             border: none;
         }
 
-        /* Versione alternativa con altezza fissa per schermi piccoli */
-        @media (max-width: 768px) {
-            .sheet-container {
-                padding-bottom: 0;
-                height: 400px;
-            }
-        }
-
         .info {
             text-align: center;
             color: #666;
             font-size: 14px;
-            margin-top: 10px;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #4a90e2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .brand-text {
+                font-size: 1.6rem;
+            }
+
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .sheet-container {
+                padding-bottom: 0;
+                height: 400px;
+            }
+
+            .page-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .brand-text {
+                font-size: 1.4rem;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <img src="images/logo-pubblicotv.jpg" alt="PUBBLICO TV Logo" class="logo">
+            <h1 class="brand-text">
+                WWW.PUBBLICO.TV <span class="tv">.TV</span>
+            </h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1>Turni TV 2000</h1>
+        <h2 class="page-title">Turni TV 2000</h2>
         
         <div class="sheet-container">
             <iframe 
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQEsQ8SWofrjAH2SIqoSAZiQgXvlZjhXC9gBOclVwEa07MAxUdYhDCL355nGYTrMJhadePjk9YIaqYG/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQEsQ8SWofrjAH2SIqoSAZiQgXvlZjhXC9gBOclVwEa07MAxUdYhDCL355nGYTrMJhadePjk9YIaqYG/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false"
                 title="Turni TV 2000">
             </iframe>
         </div>
         
         <div class="info">
-            <p>Dati aggiornati automaticamente</p>
+            <p>📊 I dati si aggiornano automaticamente dal foglio Google originale</p>
         </div>
     </div>
 </body>
 </html>
-
