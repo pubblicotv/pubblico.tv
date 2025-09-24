@@ -40,22 +40,20 @@
         }
 
         .logo {
+            width: 50px;
             height: 50px;
-            width: auto; /* Mantiene le proporzioni originali */
-            max-width: 35px; /* Limita la larghezza per non occupare troppo spazio */
-            border-radius: 8px; /* Angoli arrotondati invece di circolare */
-            border: 2px solid white;
+            border-radius: 50%; /* Forma circolare per logo quadrato */
+            border: 3px solid white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
-            object-fit: contain; /* Assicura che l'immagine sia contenuta senza distorsioni */
-            background-color: white; /* Sfondo bianco nel caso ci siano trasparenze */
+            object-fit: cover; /* Copre tutto lo spazio mantenendo le proporzioni */
         }
 
         .logo:hover {
             transform: scale(1.05);
         }
 
-        /* Responsive adjustments for logo */
+        /* Responsive Design Mobile-First */
         @media (max-width: 768px) {
             .header-content {
                 padding: 12px 15px;
@@ -63,8 +61,8 @@
             }
 
             .logo {
+                width: 45px;
                 height: 45px;
-                max-width: 32px;
             }
 
             .brand-text {
@@ -79,8 +77,8 @@
             }
 
             .logo {
+                width: 40px;
                 height: 40px;
-                max-width: 28px;
             }
 
             .brand-text {
@@ -254,7 +252,7 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <img src="images/logo-rett-small-pubblico.tv.png" alt="PUBBLICO TV Logo" class="logo">
+            <img src="images/logo-pubblicotv.png" alt="PUBBLICO TV Logo" class="logo">
             <h1 class="brand-text">
                 PUBBLICO <span class="tv">.TV</span>
             </h1>
@@ -281,4 +279,5 @@
     </div>
 </body>
 </html>
+
 
