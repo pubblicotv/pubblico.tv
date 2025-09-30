@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /turni-LAmJCyufRdqA7G2KrU5q8C7ng8fuZn76.html
+Disallow: /turni-Y57qbPJZBL9YMxjjLj85pwj7RGBdfVks.html
 
 # Opzionale: puoi aggiungere anche pattern per altri file simili
 # Disallow: /turni-*.html
