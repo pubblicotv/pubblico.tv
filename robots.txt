@@ -1,11 +1,8 @@
 User-agent: *
-Disallow: /turni-Y57qbPJZBL9YMxjjLj85pwj7RGBdfVks.html
-
-# Opzionale: puoi aggiungere anche pattern per altri file simili
-# Disallow: /turni-*.html
+Disallow: /turni-*.html
 
 # Mantieni l'accesso al resto del sito
 Allow: /
 
-# Sitemap (se ce l'hai)
+# Sitemap
 Sitemap: https://www.pubblico.tv/sitemap.xml
