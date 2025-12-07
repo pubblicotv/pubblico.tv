@@ -8,247 +8,390 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap');
         
         * {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
         }
         
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        
-        .hero-pattern {
-            background-color: #1e3a8a;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         html {
             scroll-behavior: smooth;
         }
 
-        .logo-placeholder {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
+        /* Effetto glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animazioni personalizzate */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0; 
+                transform: translateX(-50px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .slide-in {
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        /* Card con effetto tilt */
+        .tilt-card {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tilt-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .tilt-card:hover::before {
+            left: 100%;
+        }
+
+        .tilt-card:hover {
+            transform: scale(1.05) rotateZ(2deg);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Sfondo hero con pattern TV */
+        .tv-pattern {
+            background-color: #0f172a;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(59, 130, 246, 0.05) 2px, rgba(59, 130, 246, 0.05) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(59, 130, 246, 0.05) 2px, rgba(59, 130, 246, 0.05) 4px);
+        }
+
+        /* Effetto neon */
+        .neon-text {
+            text-shadow: 
+                0 0 10px rgba(59, 130, 246, 0.8),
+                0 0 20px rgba(59, 130, 246, 0.6),
+                0 0 30px rgba(59, 130, 246, 0.4),
+                0 0 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .neon-border {
+            box-shadow: 
+                0 0 10px rgba(59, 130, 246, 0.6),
+                0 0 20px rgba(59, 130, 246, 0.4),
+                inset 0 0 10px rgba(59, 130, 246, 0.2);
+        }
+
+        /* Gradient animato */
+        .gradient-animate {
+            background: linear-gradient(-45deg, #1e40af, #3b82f6, #60a5fa, #1e40af);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Effetto parallax */
+        .parallax {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        /* Stile unico per le cards trasmissioni */
+        .show-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .show-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .show-card:hover .overlay {
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 100%);
+        }
+
+        .show-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .show-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Logo networks styling */
+        .network-logo {
+            filter: grayscale(100%) brightness(0.5);
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+
+        .network-logo:hover {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+        }
+
+        /* Stile bento grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-slate-950 text-white">
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <!-- Navigation con glassmorphism -->
+    <nav class="fixed w-full top-0 z-50 glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold text-blue-600">Pubblico.TV</span>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center neon-border">
+                        <i class="fas fa-tv text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold neon-text">Pubblico.TV</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="#trasmissioni" class="text-gray-700 hover:text-blue-600 transition">Trasmissioni</a>
-                    <a href="#chi-siamo" class="text-gray-700 hover:text-blue-600 transition">Chi Siamo</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition">Portfolio</a>
-                    <a href="#contatti" class="text-gray-700 hover:text-blue-600 transition">Contatti</a>
+                    <a href="#home" class="hover:text-blue-400 transition font-medium">Home</a>
+                    <a href="#trasmissioni" class="hover:text-blue-400 transition font-medium">Trasmissioni</a>
+                    <a href="#chi-siamo" class="hover:text-blue-400 transition font-medium">Chi Siamo</a>
+                    <a href="#portfolio" class="hover:text-blue-400 transition font-medium">Portfolio</a>
+                    <a href="#clienti" class="hover:text-blue-400 transition font-medium">Clienti</a>
+                    <a href="#contatti" class="hover:text-blue-400 transition font-medium">Contatti</a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <button id="mobile-menu-btn" class="md:hidden text-white">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded">Home</a>
-                <a href="#trasmissioni" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded">Trasmissioni</a>
-                <a href="#chi-siamo" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded">Chi Siamo</a>
-                <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded">Portfolio</a>
-                <a href="#contatti" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 rounded">Contatti</a>
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-white/20">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 hover:bg-white/10 rounded">Home</a>
+                <a href="#trasmissioni" class="block px-3 py-2 hover:bg-white/10 rounded">Trasmissioni</a>
+                <a href="#chi-siamo" class="block px-3 py-2 hover:bg-white/10 rounded">Chi Siamo</a>
+                <a href="#portfolio" class="block px-3 py-2 hover:bg-white/10 rounded">Portfolio</a>
+                <a href="#clienti" class="block px-3 py-2 hover:bg-white/10 rounded">Clienti</a>
+                <a href="#contatti" class="block px-3 py-2 hover:bg-white/10 rounded">Contatti</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-pattern pt-24 pb-20 px-4">
-        <div class="max-w-7xl mx-auto text-center animate-fade-in">
-            <div class="logo-placeholder mb-8">
-                <i class="fas fa-tv text-white text-5xl"></i>
+    <!-- Hero Section con design unico -->
+    <section id="home" class="tv-pattern pt-32 pb-24 px-4 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl float-animation"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl float-animation" style="animation-delay: 3s;"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-12 slide-in">
+                <div class="inline-block mb-6">
+                    <div class="text-sm font-semibold tracking-widest text-blue-400 uppercase mb-2">
+                        <i class="fas fa-broadcast-tower mr-2"></i>Dal 2010 nel settore TV
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 neon-text">
+                    Diventa la <span class="gradient-animate bg-clip-text text-transparent">Stella</span><br/>della TV Italiana
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+                    Partecipa come pubblico in studio ai programmi più seguiti.<br/>
+                    <span class="text-blue-400 font-semibold">Un'esperienza unica, dietro le quinte dello spettacolo.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#trasmissioni" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-bold text-lg transition shadow-lg neon-border inline-flex items-center">
+                        Scopri le Opportunità <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#contatti" class="px-8 py-4 glass hover:bg-white/20 rounded-full font-bold text-lg transition inline-flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Contattaci
+                    </a>
+                </div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                Diventa Protagonista della TV
-            </h1>
-            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Partecipa come pubblico in studio alle principali trasmissioni televisive italiane
-            </p>
-            <a href="#trasmissioni" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition shadow-lg">
-                Scopri le Trasmissioni <i class="fas fa-arrow-down ml-2"></i>
-            </a>
-            <div class="mt-12 flex justify-center space-x-6">
-                <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="text-white hover:text-blue-200 transition" title="WhatsApp">
-                    <i class="fab fa-whatsapp text-3xl"></i>
+
+            <!-- Social media con stile unico -->
+            <div class="flex justify-center space-x-6 mt-12">
+                <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="w-14 h-14 glass rounded-full flex items-center justify-center hover:bg-green-500/30 hover:scale-110 transition" title="WhatsApp">
+                    <i class="fab fa-whatsapp text-2xl"></i>
                 </a>
-                <a href="https://www.facebook.com/romapubblicotv" class="text-white hover:text-blue-200 transition" title="Facebook">
-                    <i class="fab fa-facebook text-3xl"></i>
+                <a href="https://www.facebook.com/romapubblicotv" class="w-14 h-14 glass rounded-full flex items-center justify-center hover:bg-blue-500/30 hover:scale-110 transition" title="Facebook">
+                    <i class="fab fa-facebook text-2xl"></i>
                 </a>
-                <a href="https://www.instagram.com/pubblico.roma" class="text-white hover:text-blue-200 transition" title="Instagram">
-                    <i class="fab fa-instagram text-3xl"></i>
+                <a href="https://www.instagram.com/pubblico.roma" class="w-14 h-14 glass rounded-full flex items-center justify-center hover:bg-pink-500/30 hover:scale-110 transition" title="Instagram">
+                    <i class="fab fa-instagram text-2xl"></i>
                 </a>
-                <a href="https://twitter.com/romapubblicotv" class="text-white hover:text-blue-200 transition" title="Twitter">
-                    <i class="fab fa-twitter text-3xl"></i>
+                <a href="https://twitter.com/romapubblicotv" class="w-14 h-14 glass rounded-full flex items-center justify-center hover:bg-sky-500/30 hover:scale-110 transition" title="Twitter">
+                    <i class="fab fa-twitter text-2xl"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Trasmissioni Section -->
-    <section id="trasmissioni" class="py-20 px-4 bg-gray-50">
+    <!-- Trasmissioni Section con design bento -->
+    <section id="trasmissioni" class="py-24 px-4 bg-slate-900">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Trasmissioni Attive</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Scopri le opportunità disponibili per partecipare alle trasmissioni televisive più seguite
-            </p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 neon-text">Trasmissioni Attive</h2>
+                <p class="text-xl text-slate-400">Scegli il programma che fa per te</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- Card 1 - PETS -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-48 flex items-center justify-center">
-                        <i class="fas fa-paw text-white text-6xl"></i>
+                <!-- Card PETS -->
+                <div class="show-card rounded-3xl overflow-hidden tilt-card">
+                    <div class="h-64 bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center relative">
+                        <div class="text-center z-10">
+                            <i class="fas fa-paw text-white text-7xl mb-4"></i>
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/80">Inserisci qui immagine:</div>
+                            <div class="text-xs text-white/60">images/pets-round.png</div>
+                        </div>
+                        <div class="overlay"></div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">PETS - Animali del Cuore</h3>
-                        <ul class="space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span><strong>Ambosessi</strong>, anche minorenni e bambini</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-calendar text-blue-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>6-14 dicembre, ore 11:00-17:00</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-euro-sign text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>Rimborso + cestino pranzo</span>
-                            </li>
-                        </ul>
-                        <a href="#contatti" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-                            Candidati Ora
-                        </a>
+                    <div class="p-8 bg-slate-800/50 backdrop-blur">
+                        <h3 class="text-2xl font-bold mb-3">PETS - Animali del Cuore</h3>
+                        <div class="space-y-3 mb-6 text-slate-300">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span><strong class="text-white">Ambosessi</strong>, anche minorenni e bambini</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span>6-14 dicembre • 11:00-17:00</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                                <span><strong class="text-green-400">Rimborso + cestino pranzo</strong></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 2 - The Jackal -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="bg-gradient-to-r from-indigo-500 to-blue-600 h-48 flex items-center justify-center">
-                        <i class="fas fa-moon text-white text-6xl"></i>
+                <!-- Card The Jackal -->
+                <div class="show-card rounded-3xl overflow-hidden tilt-card">
+                    <div class="h-64 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative">
+                        <div class="text-center z-10">
+                            <i class="fas fa-moon text-white text-7xl mb-4"></i>
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/80">Inserisci qui immagine:</div>
+                            <div class="text-xs text-white/60">images/the-jackal-sito-round.png</div>
+                        </div>
+                        <div class="overlay"></div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Stasera a Letto Tardi</h3>
-                        <ul class="space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span><strong>Solo maggiorenni</strong></span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-calendar text-blue-500 mt-1 mr-2 flex-shrink-0"></i>
+                    <div class="p-8 bg-slate-800/50 backdrop-blur">
+                        <h3 class="text-2xl font-bold mb-3">Stasera a Letto Tardi</h3>
+                        <div class="space-y-3 mb-6 text-slate-300">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span><strong class="text-white">Solo maggiorenni</strong></span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                                 <span>7-8, 14-15, 21-22, 28-29 nov + 5-6 dic</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-clock text-purple-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>Ore 15:00-20:30</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-ticket-alt text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>Ingresso gratuito</span>
-                            </li>
-                        </ul>
-                        <a href="#contatti" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-                            Candidati Ora
-                        </a>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span>15:00-20:30</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                                <span><strong class="text-green-400">Ingresso gratuito</strong></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 3 - A Ruota Libera -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-tv text-white text-6xl"></i>
+                <!-- Card A Ruota Libera -->
+                <div class="show-card rounded-3xl overflow-hidden tilt-card">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center relative">
+                        <div class="text-center z-10">
+                            <i class="fas fa-tv text-white text-7xl mb-4"></i>
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/80">Inserisci qui immagine:</div>
+                            <div class="text-xs text-white/60">images/a-ruota-libera-logo-sito.png</div>
+                        </div>
+                        <div class="overlay"></div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Da Noi... A Ruota Libera</h3>
-                        <ul class="space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span><strong>Solo maggiorenni</strong></span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-calendar text-blue-500 mt-1 mr-2 flex-shrink-0"></i>
+                    <div class="p-8 bg-slate-800/50 backdrop-blur">
+                        <h3 class="text-2xl font-bold mb-3">Da Noi... A Ruota Libera</h3>
+                        <div class="space-y-3 mb-6 text-slate-300">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span><strong class="text-white">Solo maggiorenni</strong></span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                                 <span>Tutte le domeniche</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-clock text-purple-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>Ore 15:15-18:45</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-ticket-alt text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>Ingresso gratuito</span>
-                            </li>
-                        </ul>
-                        <a href="#contatti" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-                            Candidati Ora
-                        </a>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span>15:15-18:45</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                                <span><strong class="text-green-400">Ingresso gratuito</strong></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 4 - Casting -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover md:col-span-2 lg:col-span-1">
-                    <div class="bg-gradient-to-r from-purple-600 to-pink-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-video text-white text-6xl"></i>
+                <!-- Card Casting -->
+                <div class="show-card rounded-3xl overflow-hidden tilt-card">
+                    <div class="h-64 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center relative">
+                        <div class="text-center z-10">
+                            <i class="fas fa-video text-white text-7xl mb-4"></i>
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/80">Inserisci qui immagine:</div>
+                            <div class="text-xs text-white/60">images/casting.png</div>
+                        </div>
+                        <div class="overlay"></div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Selezione Figuranti</h3>
-                        <ul class="space-y-2 text-gray-600 mb-4">
-                            <li class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-2 flex-shrink-0"></i>
+                    <div class="p-8 bg-slate-800/50 backdrop-blur">
+                        <h3 class="text-2xl font-bold mb-3">Selezione Figuranti</h3>
+                        <div class="space-y-3 mb-6 text-slate-300">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                                 <span>Roma Aurelia</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span><strong>Solo maggiorenni</strong></span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-calendar text-blue-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>Lunedì-Venerdì</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-euro-sign text-green-500 mt-1 mr-2 flex-shrink-0"></i>
-                                <span>Con rimborso</span>
-                            </li>
-                        </ul>
-                        <a href="#contatti" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-                            Candidati Ora
-                        </a>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span><strong class="text-white">Solo maggiorenni</strong></span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span>Lun-Ven • Mattina e pomeriggio</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                                <span><strong class="text-green-400">Con rimborso</strong></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -256,43 +399,53 @@
         </div>
     </section>
 
-    <!-- Chi Siamo Section -->
-    <section id="chi-siamo" class="py-20 px-4 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Chi Siamo</h2>
-                    <p class="text-lg text-gray-600 mb-4">
-                        <strong>Pubblico TV</strong> è leader nel reclutamento e nella gestione del pubblico in studio per le maggiori trasmissioni televisive nazionali italiane.
+    <!-- Chi Siamo con layout asimmetrico -->
+    <section id="chi-siamo" class="py-24 px-4 bg-slate-950 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                <div class="lg:col-span-3">
+                    <div class="inline-block px-4 py-2 glass rounded-full mb-6">
+                        <span class="text-blue-400 font-semibold"><i class="fas fa-star mr-2"></i>Chi Siamo</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 neon-text">La Tua Porta d'Accesso al Mondo TV</h2>
+                    <p class="text-xl text-slate-300 mb-6 leading-relaxed">
+                        <strong class="text-white">Pubblico TV</strong> è il punto di riferimento per chi vuole vivere l'emozione della televisione da protagonista. Dal 2010 selezioniamo e coordiniamo il pubblico per i programmi più amati d'Italia.
                     </p>
-                    <p class="text-lg text-gray-600 mb-4">
-                        Con anni di esperienza nel settore, collaboriamo con le principali produzioni televisive italiane, garantendo professionalità e affidabilità in ogni progetto.
+                    <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                        Il nostro team di professionisti lavora ogni giorno con le principali produzioni televisive nazionali, garantendo un'esperienza unica a migliaia di partecipanti. Non siamo solo un'agenzia, siamo il ponte tra te e lo spettacolo.
                     </p>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Il nostro team seleziona e coordina migliaia di partecipanti ogni anno, creando l'atmosfera perfetta per ogni show televisivo e contribuendo al successo dei programmi più amati dal pubblico italiano.
-                    </p>
-                    <div class="grid grid-cols-3 gap-4 text-center">
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <div class="text-3xl font-bold text-blue-600">10+</div>
-                            <div class="text-sm text-gray-600">Anni di Esperienza</div>
+                    
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center p-6 glass rounded-2xl neon-border">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">10+</div>
+                            <div class="text-sm text-slate-400 uppercase tracking-wide">Anni</div>
                         </div>
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <div class="text-3xl font-bold text-blue-600">50+</div>
-                            <div class="text-sm text-gray-600">Programmi TV</div>
+                        <div class="text-center p-6 glass rounded-2xl neon-border">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">50+</div>
+                            <div class="text-sm text-slate-400 uppercase tracking-wide">Programmi</div>
                         </div>
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <div class="text-3xl font-bold text-blue-600">10k+</div>
-                            <div class="text-sm text-gray-600">Partecipanti</div>
+                        <div class="text-center p-6 glass rounded-2xl neon-border">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">10k+</div>
+                            <div class="text-sm text-slate-400 uppercase tracking-wide">Persone</div>
                         </div>
                     </div>
                 </div>
-                <div class="relative">
-                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
-                        <i class="fas fa-quote-left text-4xl mb-4 opacity-50"></i>
-                        <p class="text-xl mb-4">
-                            La nostra missione è creare esperienze uniche per il pubblico televisivo, garantendo professionalità e coinvolgimento in ogni registrazione.
+                
+                <div class="lg:col-span-2">
+                    <div class="glass p-8 rounded-3xl neon-border">
+                        <div class="text-blue-400 text-6xl mb-6"><i class="fas fa-quote-left"></i></div>
+                        <p class="text-xl mb-6 leading-relaxed">
+                            Creiamo <span class="text-blue-400 font-bold">esperienze indimenticabili</span> per ogni persona che partecipa ai nostri programmi. La tua emozione è il nostro successo.
                         </p>
-                        <p class="font-semibold">Il Team Pubblico TV</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mr-4"></div>
+                            <div>
+                                <div class="font-bold">Il Team</div>
+                                <div class="text-sm text-slate-400">Pubblico TV</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -300,92 +453,231 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 px-4 bg-gray-50">
+    <section id="portfolio" class="py-24 px-4 bg-slate-900">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Le Nostre Collaborazioni</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Abbiamo collaborato con i programmi più seguiti della televisione italiana
-            </p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 neon-text">I Nostri Programmi</h2>
+                <p class="text-xl text-slate-400">Una storia di successi e collaborazioni prestigiose</p>
+            </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-star text-yellow-500 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">Da Noi... A Ruota Libera</h3>
-                    <p class="text-sm text-gray-500">RAI 1</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Portfolio Card 1 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-star text-yellow-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">Da Noi... A Ruota Libera</h3>
+                    <p class="text-sm text-slate-400 text-center">RAI 1</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-laugh text-purple-500 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">The Jackal</h3>
-                    <p class="text-sm text-gray-500">Comedy Show</p>
+
+                <!-- Portfolio Card 2 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-laugh text-purple-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">The Jackal</h3>
+                    <p class="text-sm text-slate-400 text-center">Comedy Show</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-heart text-red-500 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">PETS</h3>
-                    <p class="text-sm text-gray-500">Animali del Cuore</p>
+
+                <!-- Portfolio Card 3 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-pink-500/20 to-red-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-heart text-red-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">PETS</h3>
+                    <p class="text-sm text-slate-400 text-center">Animali del Cuore</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-music text-blue-500 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">Talent Show</h3>
-                    <p class="text-sm text-gray-500">Vari Network</p>
+
+                <!-- Portfolio Card 4 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-blue-500/20 to-cyan-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-music text-blue-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">Talent Show</h3>
+                    <p class="text-sm text-slate-400 text-center">Vari Network</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-gamepad text-green-500 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">Quiz Show</h3>
-                    <p class="text-sm text-gray-500">Prime Time</p>
+
+                <!-- Portfolio Card 5 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-gamepad text-green-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">Quiz Show</h3>
+                    <p class="text-sm text-slate-400 text-center">Prime Time</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-microphone text-indigo-500 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">Talk Show</h3>
-                    <p class="text-sm text-gray-500">Nazionali</p>
+
+                <!-- Portfolio Card 6 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-indigo-500/20 to-purple-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-microphone text-indigo-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">Talk Show</h3>
+                    <p class="text-sm text-slate-400 text-center">Nazionali</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-film text-orange-500 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">Reality Show</h3>
-                    <p class="text-sm text-gray-500">Produzioni TV</p>
+
+                <!-- Portfolio Card 7 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-film text-orange-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">Reality Show</h3>
+                    <p class="text-sm text-slate-400 text-center">Produzioni TV</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
-                    <i class="fas fa-trophy text-yellow-600 text-3xl mb-3"></i>
-                    <h3 class="font-semibold text-gray-800">Eventi Speciali</h3>
-                    <p class="text-sm text-gray-500">Gala & Awards</p>
+
+                <!-- Portfolio Card 8 -->
+                <div class="glass p-6 rounded-2xl hover:bg-white/10 transition group">
+                    <div class="aspect-square bg-gradient-to-br from-yellow-500/20 to-orange-600/20 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <div class="text-center">
+                            <div class="text-sm uppercase tracking-widest font-bold text-white/60 mb-2">Immagine Logo</div>
+                            <i class="fas fa-trophy text-yellow-400 text-4xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-center mb-1">Eventi Speciali</h3>
+                    <p class="text-sm text-slate-400 text-center">Gala & Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clienti Section -->
+    <section id="clienti" class="py-24 px-4 bg-slate-950 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 neon-text">I Nostri Clienti</h2>
+                <p class="text-xl text-slate-400">Collaboriamo con le più importanti reti televisive italiane</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <!-- RAI -->
+                <div class="glass p-8 rounded-2xl flex items-center justify-center hover:bg-white/10 transition group">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-blue-400 mb-2 network-logo group-hover:scale-110 transition">RAI</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider">Radiotelevisione Italiana</div>
+                    </div>
+                </div>
+
+                <!-- Mediaset -->
+                <div class="glass p-8 rounded-2xl flex items-center justify-center hover:bg-white/10 transition group">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-red-400 mb-2 network-logo group-hover:scale-110 transition">MEDIASET</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider">Canale 5 • Italia 1 • Rete 4</div>
+                    </div>
+                </div>
+
+                <!-- Sky -->
+                <div class="glass p-8 rounded-2xl flex items-center justify-center hover:bg-white/10 transition group">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-cyan-400 mb-2 network-logo group-hover:scale-110 transition">SKY</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider">Sky Italia</div>
+                    </div>
+                </div>
+
+                <!-- TV 2000 -->
+                <div class="glass p-8 rounded-2xl flex items-center justify-center hover:bg-white/10 transition group">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-400 mb-2 network-logo group-hover:scale-110 transition">TV 2000</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider">Emittente Nazionale</div>
+                    </div>
+                </div>
+
+                <!-- La7 -->
+                <div class="glass p-8 rounded-2xl flex items-center justify-center hover:bg-white/10 transition group">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-green-400 mb-2 network-logo group-hover:scale-110 transition">La7</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider">Cairo Communication</div>
+                    </div>
+                </div>
+
+                <!-- NOVE -->
+                <div class="glass p-8 rounded-2xl flex items-center justify-center hover:bg-white/10 transition group">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-orange-400 mb-2 network-logo group-hover:scale-110 transition">NOVE</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider">Discovery Italia</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats bar -->
+            <div class="mt-16 glass p-8 rounded-3xl neon-border">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-blue-400 mb-2"><i class="fas fa-handshake mr-2"></i>6+</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-wide">Network Partner</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-purple-400 mb-2"><i class="fas fa-tv mr-2"></i>50+</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-wide">Programmi Attivi</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-pink-400 mb-2"><i class="fas fa-users mr-2"></i>10k+</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-wide">Partecipanti/Anno</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-green-400 mb-2"><i class="fas fa-star mr-2"></i>98%</div>
+                        <div class="text-sm text-slate-400 uppercase tracking-wide">Soddisfazione</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contatti" class="py-20 px-4 bg-white">
+    <section id="contatti" class="py-24 px-4 bg-slate-900">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Contattaci</h2>
-            <p class="text-center text-gray-600 mb-12">
-                Compila il form per candidarti o per ricevere maggiori informazioni
-            </p>
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 neon-text">Entra nel Mondo TV</h2>
+                <p class="text-xl text-slate-400">Compila il form e inizia la tua avventura televisiva</p>
+            </div>
             
-            <form id="fs-frm" name="pubblicotv-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvonbaey" method="post" class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+            <form id="fs-frm" name="pubblicotv-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvonbaey" method="post" class="glass p-8 md:p-12 rounded-3xl neon-border">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Nome</label>
-                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        <label class="block text-white font-semibold mb-3 text-sm uppercase tracking-wide">Nome *</label>
+                        <input type="text" name="name" required class="w-full px-5 py-4 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 outline-none transition">
                     </div>
                     <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Cognome</label>
-                        <input type="text" name="cognome" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        <label class="block text-white font-semibold mb-3 text-sm uppercase tracking-wide">Cognome *</label>
+                        <input type="text" name="cognome" required class="w-full px-5 py-4 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 outline-none transition">
                     </div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Email</label>
-                        <input type="email" name="email-address" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        <label class="block text-white font-semibold mb-3 text-sm uppercase tracking-wide">Email *</label>
+                        <input type="email" name="email-address" required class="w-full px-5 py-4 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 outline-none transition">
                     </div>
                     <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Cellulare</label>
-                        <input type="tel" name="cellulare" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        <label class="block text-white font-semibold mb-3 text-sm uppercase tracking-wide">Cellulare *</label>
+                        <input type="tel" name="cellulare" required class="w-full px-5 py-4 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 outline-none transition">
                     </div>
                 </div>
                 
                 <div class="mb-6">
-                    <label class="block text-gray-700 font-semibold mb-2">Trasmissione di interesse</label>
-                    <select name="programma-tv" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    <label class="block text-white font-semibold mb-3 text-sm uppercase tracking-wide">Trasmissione di interesse *</label>
+                    <select name="programma-tv" required class="w-full px-5 py-4 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 outline-none transition">
                         <option value="">Seleziona trasmissione...</option>
                         <option value="pets">PETS - Animali del Cuore</option>
                         <option value="jack">Stasera a letto tardi</option>
@@ -395,70 +687,78 @@
                     </select>
                 </div>
                 
-                <div class="mb-6">
-                    <label class="block text-gray-700 font-semibold mb-2">Messaggio</label>
-                    <textarea name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"></textarea>
+                <div class="mb-8">
+                    <label class="block text-white font-semibold mb-3 text-sm uppercase tracking-wide">Messaggio</label>
+                    <textarea name="message" rows="5" class="w-full px-5 py-4 rounded-xl bg-slate-800/50 border border-slate-700 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 outline-none transition resize-none"></textarea>
                 </div>
                 
-                <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition shadow-lg">
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition shadow-lg neon-border">
                     <i class="fas fa-paper-plane mr-2"></i> Invia Candidatura
                 </button>
             </form>
 
-            <div class="mt-12 text-center">
-                <p class="text-gray-600 mb-4">Oppure contattaci direttamente:</p>
-                <a href="mailto:info@pubblico.tv" class="inline-flex items-center text-blue-600 hover:text-blue-700 text-lg font-semibold">
-                    <i class="fas fa-envelope mr-2"></i> info@pubblico.tv
+            <div class="mt-12 text-center glass p-8 rounded-2xl">
+                <p class="text-slate-400 mb-4 text-lg">Preferisci contattarci direttamente?</p>
+                <a href="mailto:info@pubblico.tv" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-xl font-bold transition">
+                    <i class="fas fa-envelope mr-3"></i> info@pubblico.tv
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4">
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Pubblico.TV</h3>
-                    <p class="text-gray-400">Il tuo partner per partecipare alle trasmissioni televisive più seguite d'Italia</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Link Utili</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#trasmissioni" class="text-gray-400 hover:text-white transition">Trasmissioni</a></li>
-                        <li><a href="#chi-siamo" class="text-gray-400 hover:text-white transition">Chi Siamo</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
-                        <li><a href="#contatti" class="text-gray-400 hover:text-white transition">Contatti</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Seguici</h4>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                            <i class="fas fa-tv text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Pubblico.TV</span>
+                    </div>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Il tuo partner di fiducia per vivere l'emozione della televisione da protagonista. Dal 2010 nel cuore dello spettacolo italiano.
+                    </p>
                     <div class="flex space-x-4">
-                        <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="text-gray-400 hover:text-white transition text-2xl" title="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-green-500/30 transition" title="WhatsApp">
+                            <i class="fab fa-whatsapp text-xl"></i>
                         </a>
-                        <a href="https://www.facebook.com/romapubblicotv" class="text-gray-400 hover:text-white transition text-2xl" title="Facebook">
-                            <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/romapubblicotv" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-blue-500/30 transition" title="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
                         </a>
-                        <a href="https://www.instagram.com/pubblico.roma" class="text-gray-400 hover:text-white transition text-2xl" title="Instagram">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/pubblico.roma" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-pink-500/30 transition" title="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://twitter.com/romapubblicotv" class="text-gray-400 hover:text-white transition text-2xl" title="Twitter">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://twitter.com/romapubblicotv" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-sky-500/30 transition" title="Twitter">
+                            <i class="fab fa-twitter text-xl"></i>
                         </a>
                     </div>
                 </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Link Rapidi</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#trasmissioni" class="hover:text-blue-400 transition">Trasmissioni</a></li>
+                        <li><a href="#chi-siamo" class="hover:text-blue-400 transition">Chi Siamo</a></li>
+                        <li><a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a></li>
+                        <li><a href="#clienti" class="hover:text-blue-400 transition">Clienti</a></li>
+                        <li><a href="#contatti" class="hover:text-blue-400 transition">Contatti</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Informazioni</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="https://www.pubblico.tv/termini-e-condizioni.html" class="hover:text-blue-400 transition">Termini e Condizioni</a></li>
+                        <li><a href="https://www.pubblico.tv/cookie-policy-ue.html" class="hover:text-blue-400 transition">Cookie Policy</a></li>
+                        <li><a href="https://www.pubblico.tv/privacy-policy-ue.html" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <div class="mb-4 space-x-4">
-                    <a href="https://www.pubblico.tv/termini-e-condizioni.html" class="text-gray-400 hover:text-white transition">Termini e Condizioni</a>
-                    <span class="text-gray-600">•</span>
-                    <a href="https://www.pubblico.tv/cookie-policy-ue.html" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
-                    <span class="text-gray-600">•</span>
-                    <a href="https://www.pubblico.tv/privacy-policy-ue.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
-                </div>
-                <p class="text-gray-400">&copy; 2023 Pubblico.TV - Tutti i diritti riservati</p>
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-slate-500">&copy; 2023 Pubblico.TV - Tutti i diritti riservati</p>
             </div>
         </div>
     </footer>
@@ -488,6 +788,16 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            parallaxElements.forEach(el => {
+                const speed = 0.5;
+                el.style.transform = `translateY(${scrolled * speed}px)`;
             });
         });
     </script>
