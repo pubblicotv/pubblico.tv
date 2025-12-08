@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pubblico TV - Partecipa alle trasmissioni televisive</title>
+    <meta name="description" content="Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive in onda? Pubblico TV gestisce pubblico per i maggiori canali italiani.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animazioni leggere */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hover sulle card */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        /* Immagini circolari */
+        .circle-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e5e7eb;
+        }
+
+        .circle-img-portfolio {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e5e7eb;
+        }
+
+        /* Placeholder per immagini */
+        .img-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation minimale -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-tv text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">Pubblico.TV</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Home</a>
+                    <a href="#trasmissioni" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Trasmissioni</a>
+                    <a href="#chi-siamo" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Chi Siamo</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Portfolio</a>
+                    <a href="#clienti" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Clienti</a>
+                    <a href="#contatti" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Contatti</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Home</a>
+                <a href="#trasmissioni" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Trasmissioni</a>
+                <a href="#chi-siamo" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Chi Siamo</a>
+                <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Portfolio</a>
+                <a href="#clienti" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Clienti</a>
+                <a href="#contatti" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section minimale -->
+    <section id="home" class="pt-32 pb-20 px-4 bg-gradient-to-b from-blue-50 to-white">
+        <div class="max-w-6xl mx-auto text-center fade-in">
+            <div class="inline-block mb-4">
+                <span class="text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 px-4 py-2 rounded-full">
+                    Dal 2010 nel settore TV
+                </span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
+                Diventa la Stella<br/>della TV Italiana
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-2xl mx-auto">
+                Partecipa come pubblico in studio ai programmi più seguiti.
+            </p>
+            <p class="text-base text-blue-600 font-medium mb-8">
+                Un'esperienza unica, dietro le quinte dello spettacolo.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="#trasmissioni" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition inline-flex items-center">
+                    Scopri le Opportunità <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="#contatti" class="px-8 py-3 bg-white hover:bg-gray-50 text-gray-900 border-2 border-gray-200 rounded-full font-semibold transition inline-flex items-center">
+                    <i class="fas fa-envelope mr-2 text-sm"></i> Contattaci
+                </a>
+            </div>
+
+            <!-- Social media minimale -->
+            <div class="flex justify-center space-x-4">
+                <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-green-500 hover:text-green-500 transition text-gray-600" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/romapubblicotv" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-blue-600 hover:text-blue-600 transition text-gray-600" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/pubblico.roma" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-pink-500 hover:text-pink-500 transition text-gray-600" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/romapubblicotv" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-sky-500 hover:text-sky-500 transition text-gray-600" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trasmissioni Section con card circolari -->
+    <section id="trasmissioni" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Trasmissioni Attive</h2>
+                <p class="text-lg text-gray-600">Scegli il programma che fa per te</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 1 - PETS -->
+                <div class="text-center card-hover">
+                    <div class="mb-6 flex justify-center">
+                        <div class="circle-img img-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-paw text-blue-400 text-5xl mb-2"></i>
+                                <div class="text-xs text-gray-500 px-4">Inserisci immagine:<br/>800x800px<br/>pets-round.png</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">PETS<br/>Animali del Cuore</h3>
+                        <div class="space-y-2 text-sm text-gray-600 mb-4 min-h-[120px]">
+                            <p><strong>Ambosessi</strong>, anche minorenni</p>
+                            <p>6-14 dicembre</p>
+                            <p>Ore 11:00-17:00</p>
+                            <p className="text-green-600 font-medium">Rimborso + pranzo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - The Jackal -->
+                <div class="text-center card-hover">
+                    <div class="mb-6 flex justify-center">
+                        <div class="circle-img img-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-moon text-indigo-400 text-5xl mb-2"></i>
+                                <div class="text-xs text-gray-500 px-4">Inserisci immagine:<br/>800x800px<br/>the-jackal.png</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">Stasera a<br/>Letto Tardi</h3>
+                        <div class="space-y-2 text-sm text-gray-600 mb-4 min-h-[120px]">
+                            <p><strong>Solo maggiorenni</strong></p>
+                            <p>7-8, 14-15, 21-22 nov</p>
+                            <p>Ore 15:00-20:30</p>
+                            <p class="text-green-600 font-medium">Ingresso gratuito</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - A Ruota Libera -->
+                <div class="text-center card-hover">
+                    <div class="mb-6 flex justify-center">
+                        <div class="circle-img img-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-tv text-blue-500 text-5xl mb-2"></i>
+                                <div class="text-xs text-gray-500 px-4">Inserisci immagine:<br/>800x800px<br/>a-ruota-libera.png</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">Da Noi...<br/>A Ruota Libera</h3>
+                        <div class="space-y-2 text-sm text-gray-600 mb-4 min-h-[120px]">
+                            <p><strong>Solo maggiorenni</strong></p>
+                            <p>Tutte le domeniche</p>
+                            <p>Ore 15:15-18:45</p>
+                            <p class="text-green-600 font-medium">Ingresso gratuito</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 - Casting -->
+                <div class="text-center card-hover">
+                    <div class="mb-6 flex justify-center">
+                        <div class="circle-img img-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-video text-purple-400 text-5xl mb-2"></i>
+                                <div class="text-xs text-gray-500 px-4">Inserisci immagine:<br/>800x800px<br/>casting.png</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">Selezione<br/>Figuranti</h3>
+                        <div class="space-y-2 text-sm text-gray-600 mb-4 min-h-[120px]">
+                            <p><strong>Solo maggiorenni</strong></p>
+                            <p>Lun-Ven, Roma Aurelia</p>
+                            <p>Mattina e pomeriggio</p>
+                            <p class="text-green-600 font-medium">Con rimborso</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Siamo -->
+    <section id="chi-siamo" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 px-4 py-2 rounded-full inline-block mb-6">
+                        Chi Siamo
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">La Tua Porta d'Accesso al Mondo TV</h2>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        <strong>Pubblico TV</strong> è il punto di riferimento per chi vuole vivere l'emozione della televisione da protagonista. Dal 2010 selezioniamo e coordiniamo il pubblico per i programmi più amati d'Italia.
+                    </p>
+                    <p class="text-base text-gray-600 mb-8 leading-relaxed">
+                        Il nostro team di professionisti lavora ogni giorno con le principali produzioni televisive nazionali, garantendo un'esperienza unica a migliaia di partecipanti. Non siamo solo un'agenzia, siamo il ponte tra te e lo spettacolo.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="text-center p-4 bg-white rounded-xl border border-gray-200">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">10+</div>
+                            <div class="text-xs text-gray-600 uppercase">Anni</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl border border-gray-200">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">50+</div>
+                            <div class="text-xs text-gray-600 uppercase">Programmi</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl border border-gray-200">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">10k+</div>
+                            <div class="text-xs text-gray-600 uppercase">Persone</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-blue-600 p-8 md:p-10 rounded-2xl text-white">
+                        <div class="text-5xl mb-6 opacity-20"><i class="fas fa-quote-left"></i></div>
+                        <p class="text-xl mb-6 leading-relaxed">
+                            Creiamo esperienze indimenticabili per ogni persona che partecipa ai nostri programmi. La tua emozione è il nostro successo.
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/20 rounded-full mr-4 flex items-center justify-center">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Il Team</div>
+                                <div class="text-sm opacity-80">Pubblico TV</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">I Nostri Programmi</h2>
+                <p class="text-lg text-gray-600">Una storia di successi e collaborazioni prestigiose</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Portfolio 1 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-star text-yellow-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">A Ruota Libera</h3>
+                    <p class="text-xs text-gray-500">RAI 1</p>
+                </div>
+
+                <!-- Portfolio 2 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-laugh text-purple-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">The Jackal</h3>
+                    <p class="text-xs text-gray-500">Comedy Show</p>
+                </div>
+
+                <!-- Portfolio 3 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-heart text-red-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">PETS</h3>
+                    <p class="text-xs text-gray-500">Animali del Cuore</p>
+                </div>
+
+                <!-- Portfolio 4 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-music text-blue-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">Talent Show</h3>
+                    <p class="text-xs text-gray-500">Vari Network</p>
+                </div>
+
+                <!-- Portfolio 5 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-gamepad text-green-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">Quiz Show</h3>
+                    <p class="text-xs text-gray-500">Prime Time</p>
+                </div>
+
+                <!-- Portfolio 6 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-microphone text-indigo-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">Talk Show</h3>
+                    <p class="text-xs text-gray-500">Nazionali</p>
+                </div>
+
+                <!-- Portfolio 7 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-film text-orange-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">Reality Show</h3>
+                    <p class="text-xs text-gray-500">Produzioni TV</p>
+                </div>
+
+                <!-- Portfolio 8 -->
+                <div class="text-center">
+                    <div class="mb-4 flex justify-center">
+                        <div class="circle-img-portfolio img-placeholder">
+                            <i class="fas fa-trophy text-yellow-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-sm text-gray-900 mb-1">Eventi Speciali</h3>
+                    <p class="text-xs text-gray-500">Gala & Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clienti Section -->
+    <section id="clienti" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">I Nostri Clienti</h2>
+                <p class="text-lg text-gray-600">Collaboriamo con le più importanti reti televisive italiane</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+                <!-- RAI -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex items-center justify-center hover:border-blue-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-1">RAI</div>
+                        <div class="text-xs text-gray-500">Radiotelevisione</div>
+                    </div>
+                </div>
+
+                <!-- Mediaset -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex items-center justify-center hover:border-red-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-red-600 mb-1">MEDIASET</div>
+                        <div class="text-xs text-gray-500">Network</div>
+                    </div>
+                </div>
+
+                <!-- Sky -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex items-center justify-center hover:border-cyan-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-cyan-600 mb-1">SKY</div>
+                        <div class="text-xs text-gray-500">Sky Italia</div>
+                    </div>
+                </div>
+
+                <!-- TV 2000 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex items-center justify-center hover:border-purple-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-purple-600 mb-1">TV 2000</div>
+                        <div class="text-xs text-gray-500">Nazionale</div>
+                    </div>
+                </div>
+
+                <!-- La7 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex items-center justify-center hover:border-green-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 mb-1">La7</div>
+                        <div class="text-xs text-gray-500">Cairo Group</div>
+                    </div>
+                </div>
+
+                <!-- NOVE -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex items-center justify-center hover:border-orange-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-orange-600 mb-1">NOVE</div>
+                        <div class="text-xs text-gray-500">Discovery</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-200">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1">6+</div>
+                        <div class="text-xs text-gray-600 uppercase">Network Partner</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1">50+</div>
+                        <div class="text-xs text-gray-600 uppercase">Programmi Attivi</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1">10k+</div>
+                        <div class="text-xs text-gray-600 uppercase">Partecipanti/Anno</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1">98%</div>
+                        <div class="text-xs text-gray-600 uppercase">Soddisfazione</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contatti" class="py-20 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Entra nel Mondo TV</h2>
+                <p class="text-lg text-gray-600">Compila il form e inizia la tua avventura televisiva</p>
+            </div>
+            
+            <form id="fs-frm" name="pubblicotv-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvonbaey" method="post" class="bg-gray-50 p-8 md:p-10 rounded-2xl border border-gray-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2 text-sm">Cognome *</label>
+                        <input type="text" name="cognome" required class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2 text-sm">Email *</label>
+                        <input type="email" name="email-address" required class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2 text-sm">Cellulare *</label>
+                        <input type="tel" name="cellulare" required class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2 text-sm">Trasmissione di interesse *</label>
+                    <select name="programma-tv" required class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        <option value="">Seleziona trasmissione...</option>
+                        <option value="pets">PETS - Animali del Cuore</option>
+                        <option value="jack">Stasera a letto tardi</option>
+                        <option value="arl">Da Noi.. A Ruota Libera</option>
+                        <option value="cast">Casting figuranti</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                </div>
+                
+                <div class="mb-8">
+                    <label class="block text-gray-700 font-medium mb-2 text-sm">Messaggio</label>
+                    <textarea name="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition resize-none"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition">
+                    <i class="fas fa-paper-plane mr-2"></i> Invia Candidatura
+                </button>
+            </form>
+
+            <div class="mt-12 text-center bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <p class="text-gray-600 mb-3">Preferisci contattarci direttamente?</p>
+                <a href="mailto:info@pubblico.tv" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition">
+                    <i class="fas fa-envelope mr-2"></i> info@pubblico.tv
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                            <i class="fas fa-tv text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold">Pubblico.TV</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed text-sm">
+                        Il tuo partner di fiducia per vivere l'emozione della televisione da protagonista. Dal 2010 nel cuore dello spettacolo italiano.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/romapubblicotv" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pubblico.roma" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/romapubblicotv" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sky-600 transition" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-sm">Link Rapidi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#trasmissioni" class="hover:text-white transition">Trasmissioni</a></li>
+                        <li><a href="#chi-siamo" class="hover:text-white transition">Chi Siamo</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#clienti" class="hover:text-white transition">Clienti</a></li>
+                        <li><a href="#contatti" class="hover:text-white transition">Contatti</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-sm">Informazioni</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="https://www.pubblico.tv/termini-e-condizioni.html" class="hover:text-white transition">Termini e Condizioni</a></li>
+                        <li><a href="https://www.pubblico.tv/cookie-policy-ue.html" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="https://www.pubblico.tv/privacy-policy-ue.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2023 Pubblico.TV - Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>">Nome *</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2 text-sm
