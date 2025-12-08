@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pubblico TV - Reclutamento Pubblico Televisivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e40af', // Blu intenso per enfasi
+                        'light-blue': '#eff6ff',   // Blu molto chiaro per sfondi/cards
+                        'dark-text': '#1f2937',    // Testo scuro
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" type="image/png" href="images/favicon.png"> <style>
+        /* Stile per l'effetto "cards circolare" */
+        .circular-card-container {
+            /* Permette lo scroll orizzontale su mobile, creando l'effetto "circolare" (carousel) */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .circular-card {
+            /* Assicura che ogni card si agganci allo scroll */
+            scroll-snap-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-dark-text antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="text-xl font-bold text-primary-blue hover:text-blue-700 transition duration-300">
+                    Pubblico TV
+                </a>
+                <div class="hidden sm:block">
+                    <div class="flex space-x-4">
+                        <a href="#home" class="text-dark-text hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                        <a href="#about" class="text-dark-text hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Chi Siamo</a>
+                        <a href="#portfolio" class="text-dark-text hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Portfolio</a>
+                        <a href="#clienti" class="text-dark-text hover:text-primary-blue px-3 py-2 rounded-md text-sm font-medium transition duration-300">Clienti</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="home" class="pt-16 pb-20 bg-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-primary-blue mb-4">
+                    Partecipa in Studio! 👏
+                </h1>
+                <p class="text-lg text-dark-text mb-12 max-w-2xl mx-auto">
+                    Reclutiamo pubblico per le **principali trasmissioni TV nazionali** in esclusiva. Trova il tuo posto in prima fila!
+                </p>
+
+                <div class="circular-card-container flex overflow-x-scroll snap-x space-x-6 pb-4 md:justify-center md:space-x-8 lg:space-x-12">
+                    
+                    <div class="circular-card flex-shrink-0 w-80 md:w-96 p-6 rounded-xl shadow-lg bg-primary-blue text-white transform hover:scale-105 transition duration-300 cursor-pointer">
+                        <img src="images/pets-round.png" alt="Logo Pets - Animali del Cuore" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white object-cover">
+                        <h3 class="text-2xl font-bold mb-2">PETS - ANIMALI DEL CUORE</h3>
+                        <p class="mb-4 text-sm font-medium">📍 ROMA - 6/14 Dicembre - **Rimborso Spese**</p>
+                        <a href="mailto:info@pubblico.tv?subject=Candidatura%20PETS" class="inline-block px-6 py-2 bg-white text-primary-blue font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md">
+                            Candidati Ora
+                        </a>
+                    </div>
+
+                    <div class="circular-card flex-shrink-0 w-80 md:w-96 p-6 rounded-xl shadow-lg bg-white text-dark-text ring-2 ring-primary-blue transform hover:scale-105 transition duration-300 cursor-pointer">
+                        <img src="images/the-jackal-sito-round.png" alt="Logo The Jackal - Stasera a letto tardi" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary-blue object-cover">
+                        <h3 class="text-2xl font-bold mb-2">THE JACKAL - STASERA A LETTO TARDI</h3>
+                        <p class="mb-4 text-sm font-medium">📍 ROMA - Prossime registrazioni</p>
+                        <a href="mailto:info@pubblico.tv?subject=Candidatura%20JACKAL" class="inline-block px-6 py-2 bg-primary-blue text-white font-semibold rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
+                            Dettagli & Iscrizione
+                        </a>
+                    </div>
+                    
+                    <div class="circular-card flex-shrink-0 w-80 md:w-96 p-6 rounded-xl shadow-lg bg-white text-dark-text transform hover:scale-105 transition duration-300 cursor-pointer">
+                        <img src="images/casting.png" alt="Icona casting generico" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200 object-cover">
+                        <h3 class="text-2xl font-bold mb-2">SELEZIONE FIGURANTI</h3>
+                        <p class="mb-4 text-sm font-medium">📍 ROMA - Disponibilità Mattina/Pomeriggio - **Rimborso**</p>
+                        <a href="mailto:info@pubblico.tv?subject=Candidatura%20FIGURANTI" class="inline-block px-6 py-2 bg-gray-100 text-dark-text font-semibold rounded-full hover:bg-gray-200 transition duration-300 shadow-md">
+                            Invia la Tua Candidatura
+                        </a>
+                    </div>
+                    
+                    </div>
+                <p class="text-xs mt-4 text-gray-500 italic">Scorri orizzontalmente per vedere tutti i programmi in esclusiva!</p>
+            </div>
+        </section>
+
+        <hr class="border-gray-100">
+
+        <section id="about" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-primary-blue mb-10">
+                    Chi Siamo 🎬
+                </h2>
+                <div class="max-w-3xl mx-auto text-lg space-y-6">
+                    <p>
+                        **Pubblico TV** è l'agenzia leader nel reclutamento e nella gestione del **pubblico in studio** per le più importanti e seguite **trasmissioni televisive nazionali** italiane. Dal grande show serale al talk-show domenicale, siamo il ponte tra te e il mondo della televisione.
+                    </p>
+                    <p>
+                        La nostra esperienza pluriennale garantisce alle produzioni televisive un pubblico sempre entusiasta, numeroso e in linea con il target del programma. Allo stesso tempo, offriamo agli spettatori un'opportunità unica per vivere l'esperienza di un set televisivo, spesso con un piccolo rimborso spese.
+                    </p>
+                    <p class="font-semibold text-primary-blue">
+                        La nostra missione: Rendere la tua esperienza TV indimenticabile, sia che tu sia una produzione o uno spettatore!
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="border-gray-100">
+
+        <section id="portfolio" class="py-20 bg-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-primary-blue mb-12">
+                    Il Nostro Portfolio di Successi 📺
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                        <img src="images/trasmissione-esempio-1.jpg" alt="Immagine della trasmissione Da Noi... A Ruota Libera" class="w-full h-48 object-cover group-hover:opacity-75 transition duration-300">
+                        <div class="p-4 bg-white">
+                            <h3 class="text-lg font-semibold text-dark-text">Da Noi... A Ruota Libera</h3>
+                            <p class="text-sm text-gray-500">RAI 1 - Talk Show</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                        <img src="images/trasmissione-esempio-2.jpg" alt="Immagine della trasmissione Amici" class="w-full h-48 object-cover group-hover:opacity-75 transition duration-300">
+                        <div class="p-4 bg-white">
+                            <h3 class="text-lg font-semibold text-dark-text">Amici di Maria De Filippi</h3>
+                            <p class="text-sm text-gray-500">Canale 5 - Talent Show</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                        <img src="images/trasmissione-esempio-3.jpg" alt="Immagine della trasmissione X Factor Italia" class="w-full h-48 object-cover group-hover:opacity-75 transition duration-300">
+                        <div class="p-4 bg-white">
+                            <h3 class="text-lg font-semibold text-dark-text">X Factor Italia</h3>
+                            <p class="text-sm text-gray-500">SKY Uno - Talent Show</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                        <img src="images/trasmissione-esempio-4.jpg" alt="Immagine della trasmissione C'è posta per te" class="w-full h-48 object-cover group-hover:opacity-75 transition duration-300">
+                        <div class="p-4 bg-white">
+                            <h3 class="text-lg font-semibold text-dark-text">C'è Posta Per Te</h3>
+                            <p class="text-sm text-gray-500">Canale 5 - People Show</p>
+                        </div>
+                    </div>
+
+                    </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-100">
+
+        <section id="clienti" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-primary-blue mb-12">
+                    Le Reti con cui Collaboriamo 🤝
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center max-w-5xl mx-auto">
+                    
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="images/logo-rai.png" alt="Logo RAI" class="w-full h-auto opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="images/logo-mediaset.png" alt="Logo Mediaset" class="w-full h-auto opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="images/logo-sky.png" alt="Logo Sky Italia" class="w-full h-auto opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="images/logo-tv2000.png" alt="Logo TV2000" class="w-full h-auto opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="images/logo-la7.png" alt="Logo La7" class="w-full h-auto opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    
+                    </div>
+            </div>
+        </section>
+        
+        <hr class="border-gray-100">
+
+        <section id="contatti" class="py-20 bg-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-primary-blue mb-12">
+                    Contattaci 💬
+                </h2>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+                    <p class="text-center text-lg mb-6">
+                        Inviaci la tua candidatura o richiedi informazioni.
+                    </p>
+                    <form id="fs-frm" name="pubblicotv-contact-form" action="https://formspree.io/f/xvonbaey" method="post" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" name="name" placeholder="Nome" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300">
+                            <input type="text" name="cognome" placeholder="Cognome" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300">
+                        </div>
+                        <input type="email" name="email-address" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300">
+                        <input type="tel" name="cellulare" placeholder="Cellulare" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300">
+                        <select name="programma-tv" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300">
+                            <option value="" disabled selected>Seleziona trasmissione...</option>
+                            <option value="pets">PETS - Animali del Cuore</option>
+                            <option value="jack">The Jackal - Stasera a letto tardi</option>
+                            <option value="arl">Da Noi.. A Ruota Libera</option>
+                            <option value="cast">Casting figuranti</option>
+                            <option value="altro">Altro...</option>
+                        </select>
+                        <textarea name="message" rows="4" placeholder="Messaggio (ricorda di allegare i tuoi dati e foto se ti candidi!)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-300"></textarea>
+                        <div class="text-center">
+                            <button type="submit" class="w-full sm:w-auto px-8 py-3 bg-primary-blue text-white font-bold rounded-full hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl">
+                                Invia Candidatura
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-6 text-sm text-gray-500">
+                        Oppure scrivici direttamente a: **info@pubblico.tv**
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark-text text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://wa.me/message/4ZDYXPKQWUGLI1" target="_blank" class="text-gray-300 hover:text-green-400 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
+                </a>
+                <a href="https://www.facebook.com/romapubblicotv" target="_blank" class="text-gray-300 hover:text-blue-600 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
+                </a>
+                </div>
+
+            <div class="space-x-4 mb-4 text-sm font-light">
+                <a href="https://www.pubblico.tv/termini-e-condizioni.html" class="hover:text-primary-blue transition duration-300">Termini e Condizioni</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://www.pubblico.tv/cookie-policy-ue.html" class="hover:text-primary-blue transition duration-300">Cookie Policy</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://www.pubblico.tv/privacy-policy-ue.html" class="hover:text-primary-blue transition duration-300">Privacy Policy</a>
+            </div>
+
+            <p class="text-sm text-gray-400">&copy; Pubblico.TV 2023. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
