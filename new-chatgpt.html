@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pubblico TV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- HERO -->
+  <header class="w-full bg-gradient-to-b from-blue-600 to-blue-400 text-white py-20 px-6 text-center">
+    <h1 class="text-4xl font-bold mb-4">Pubblico TV</h1>
+    <p class="text-lg max-w-xl mx-auto">Reclutiamo pubblico televisivo per le principali trasmissioni italiane. Partecipa, vivi l'esperienza, applaudi da protagonista!</p>
+    <a href="#reclutamenti" class="inline-block mt-6 bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-slate-100">Vedi i reclutamenti</a>
+  </header>
+
+  <!-- CHI SIAMO -->
+  <section id="chi-siamo" class="px-6 py-16 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Chi Siamo</h2>
+    <p class="leading-relaxed text-slate-700 text-lg">Siamo un team con anni di esperienza nel settore televisivo, specializzato nel reclutamento e nella gestione del pubblico in studio per i più importanti programmi nazionali. Lavoriamo con passione, serietà e professionalità per garantire energia e partecipazione autentica ad ogni trasmissione.</p>
+  </section>
+
+  <!-- RECLUTAMENTI IN CORSO -->
+  <section id="reclutamenti" class="px-6 py-16 bg-slate-50">
+    <h2 class="text-3xl font-bold text-blue-700 mb-10 text-center">Reclutamenti Attivi</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+      <!-- CARD 1 -->
+      <div class="bg-white shadow rounded-3xl p-6 text-center">
+        <img src="images/pets-round.png" class="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
+        <h3 class="text-xl font-semibold text-blue-600">PETS - ANIMALI DEL CUORE</h3>
+        <p class="text-sm text-slate-600 mt-2">Selezioniamo ambosessi, anche minorenni e bambini, per il pubblico in studio.</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white shadow rounded-3xl p-6 text-center">
+        <img src="images/the-jackal-sito-round.png" class="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
+        <h3 class="text-xl font-semibold text-blue-600">THE JACKAL - STASERA A LETTO TARDI</h3>
+        <p class="text-sm text-slate-600 mt-2">Selezioniamo maggiorenni per il pubblico in studio, ingresso gratuito.</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white shadow rounded-3xl p-6 text-center">
+        <img src="images/a-ruota-libera-logo-sito.png" class="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
+        <h3 class="text-xl font-semibold text-blue-600">DA NOI... A RUOTA LIBERA</h3>
+        <p class="text-sm text-slate-600 mt-2">Pubblico maggiorenne per le puntate della domenica pomeriggio.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="px-6 py-16 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-700 mb-10 text-center">Portfolio Collaborazioni</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <img src="images/example1.jpg" class="rounded-xl shadow object-cover" />
+      <img src="images/example2.jpg" class="rounded-xl shadow object-cover" />
+      <img src="images/example3.jpg" class="rounded-xl shadow object-cover" />
+      <img src="images/example4.jpg" class="rounded-xl shadow object-cover" />
+    </div>
+  </section>
+
+  <!-- CLIENTI -->
+  <section id="clienti" class="px-6 py-16 bg-slate-50">
+    <h2 class="text-3xl font-bold text-blue-700 mb-10 text-center">I Nostri Clienti</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-10 max-w-5xl mx-auto items-center">
+      <img src="images/rai.png" class="h-12 mx-auto opacity-80" />
+      <img src="images/mediaset.png" class="h-12 mx-auto opacity-80" />
+      <img src="images/sky.png" class="h-12 mx-auto opacity-80" />
+      <img src="images/tv2000.png" class="h-12 mx-auto opacity-80" />
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="px-6 py-16 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Contatti</h2>
+    <form action="#" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <input type="text" placeholder="Nome" class="border rounded-lg p-3" />
+      <input type="text" placeholder="Cognome" class="border rounded-lg p-3" />
+      <input type="email" placeholder="Email" class="border rounded-lg p-3" />
+      <input type="text" placeholder="Cellulare" class="border rounded-lg p-3" />
+      <select class="border rounded-lg p-3 col-span-1 sm:col-span-2">
+        <option>Seleziona trasmissione...</option>
+        <option>Da Noi... A Ruota Libera</option>
+        <option>Stasera a letto tardi</option>
+        <option>Casting figuranti</option>
+      </select>
+      <textarea placeholder="Messaggio" rows="5" class="border rounded-lg p-3 col-span-1 sm:col-span-2"></textarea>
+      <button class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow col-span-1 sm:col-span-2">Invia</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-8 bg-blue-600 text-white text-sm">
+    © Pubblico.TV 2025 — Tutti i diritti riservati
+  </footer>
+
+</body>
+</html>
