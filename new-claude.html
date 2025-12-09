@@ -680,10 +680,15 @@
             <div class="mt-12 bg-white p-8 rounded-2xl border-2 border-orange-200 text-center">
                 <i class="fas fa-smile-beam text-orange-500 text-5xl mb-4"></i>
                 <h3 class="text-2xl font-bold text-gray-900 mb-3">Vuoi essere anche tu protagonista?</h3>
-                <p class="text-gray-600 mb-6">Candidati ora e vivi l'emozione della TV da dentro!</p>
-                <a href="#contatti" class="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold transition">
-                    <i class="fas fa-star mr-2"></i>Candidati Ora
-                </a>
+                <p class="text-gray-600 mb-6">Invia la tua candidatura via WhatsApp o Email con foto e dati completi!</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="inline-block px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Candidati via WhatsApp
+                    </a>
+                    <a href="#contatti" class="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold transition">
+                        <i class="fas fa-envelope mr-2"></i>Scopri Come Candidarti
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -780,70 +785,88 @@
             
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <div class="bg-white p-6 rounded-xl border-2 border-gray-200">
-                    <h3 class="font-bold text-lg text-gray-900 mb-3 flex items-start">
-                        <i class="fas fa-question-circle text-blue-600 mr-3 mt-1"></i>
-                        Pubblico TV è affiliato alle emittenti televisive?
-                    </h3>
-                    <p class="text-gray-600 ml-8">
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between" onclick="toggleFaq(this)">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Pubblico TV è affiliato alle emittenti televisive?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon rotate"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8 active">
                         No, siamo un <strong>operatore indipendente</strong>. Non siamo affiliati o collegati a nessuna produzione, redazione, canale o emittente televisiva. Lavoriamo come intermediari professionisti tra il pubblico e le produzioni TV.
-                    </p>
+                    </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="bg-white p-6 rounded-xl border-2 border-gray-200">
-                    <h3 class="font-bold text-lg text-gray-900 mb-3 flex items-start">
-                        <i class="fas fa-question-circle text-blue-600 mr-3 mt-1"></i>
-                        Come vengono gestiti i miei dati personali?
-                    </h3>
-                    <p class="text-gray-600 ml-8">
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between" onclick="toggleFaq(this)">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Come vengono gestiti i miei dati personali?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
                         I tuoi dati sono trattati in conformità al <strong>GDPR</strong> (Regolamento UE 679/2016). Li raccogliamo esclusivamente per gestire la tua partecipazione e garantire <strong>accessi controllati e sicuri</strong> agli studi televisivi. Non vengono diffusi pubblicamente. <a href="privacy-policy-ue.html" class="text-blue-600 hover:underline">Leggi la Privacy Policy completa</a>.
-                    </p>
+                    </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="bg-white p-6 rounded-xl border-2 border-gray-200">
-                    <h3 class="font-bold text-lg text-gray-900 mb-3 flex items-start">
-                        <i class="fas fa-question-circle text-blue-600 mr-3 mt-1"></i>
-                        Posso cancellare o modificare la mia partecipazione?
-                    </h3>
-                    <p class="text-gray-600 ml-8">
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between" onclick="toggleFaq(this)">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Posso cancellare o modificare la mia partecipazione?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
                         Se per motivi personali non puoi più partecipare, ti chiediamo di avvisarci <strong>con almeno 48 ore di anticipo</strong> via email o telefono. Questo ci permette di gestire al meglio le disponibilità. In caso di modifica delle date da parte della produzione, ti avviseremo immediatamente.
-                    </p>
+                    </div>
                 </div>
 
                 <!-- FAQ 4 -->
-                <div class="bg-white p-6 rounded-xl border-2 border-gray-200">
-                    <h3 class="font-bold text-lg text-gray-900 mb-3 flex items-start">
-                        <i class="fas fa-question-circle text-blue-600 mr-3 mt-1"></i>
-                        Cosa significa "ingresso gratuito" vs "con rimborso"?
-                    </h3>
-                    <p class="text-gray-600 ml-8">
-                        <strong>Ingresso gratuito</strong>: partecipi alla trasmissione senza alcun costo, previa prenotazione confermata.<br>
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between" onclick="toggleFaq(this)">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Cosa significa "ingresso gratuito" vs "con rimborso"?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        <strong>Ingresso gratuito</strong>: partecipi alla trasmissione senza alcun costo, previa prenotazione confermata.<br><br>
                         <strong>Con rimborso</strong>: ricevi un compenso per la tua presenza (l'importo varia in base al programma). In alcuni casi include anche il cestino pranzo.
-                    </p>
+                    </div>
                 </div>
 
                 <!-- FAQ 5 -->
-                <div class="bg-white p-6 rounded-xl border-2 border-gray-200">
-                    <h3 class="font-bold text-lg text-gray-900 mb-3 flex items-start">
-                        <i class="fas fa-question-circle text-blue-600 mr-3 mt-1"></i>
-                        Cosa devo portare il giorno della registrazione?
-                    </h3>
-                    <p class="text-gray-600 ml-8">
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between" onclick="toggleFaq(this)">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Cosa devo portare il giorno della registrazione?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
                         <strong>Documento d'identità valido</strong> (obbligatorio per accesso sicurezza), conferma della prenotazione (email/SMS) e abbigliamento adeguato come indicato nella conferma. Per i minorenni è necessaria l'autorizzazione dei genitori.
-                    </p>
+                    </div>
                 </div>
 
                 <!-- FAQ 6 -->
-                <div class="bg-white p-6 rounded-xl border-2 border-gray-200">
-                    <h3 class="font-bold text-lg text-gray-900 mb-3 flex items-start">
-                        <i class="fas fa-question-circle text-blue-600 mr-3 mt-1"></i>
-                        Come funziona la prenotazione?
-                    </h3>
-                    <p class="text-gray-600 ml-8">
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between" onclick="toggleFaq(this)">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Come funziona la prenotazione?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
                         Compila il form con i tuoi dati. Sarai <strong>contattato telefonicamente</strong> dal nostro staff per conferma, dettagli logistici e risposta a eventuali domande. La prenotazione è confermata solo dopo il contatto telefonico.
-                    </p>
+                    </div>
                 </div>
             </div>
 
@@ -861,65 +884,137 @@
 
     <!-- Contact Section -->
     <section id="contatti" class="py-20 px-4 bg-white">
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Entra nel Mondo TV</h2>
-                <p class="text-lg text-gray-600">Compila il form e inizia la tua avventura televisiva</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Contattaci</h2>
+                <p class="text-lg text-gray-600">Hai domande? Scrivici per informazioni generali</p>
             </div>
-            
-            <form id="fs-frm" name="pubblicotv-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvonbaey" method="post" class="bg-gray-50 p-8 md:p-10 rounded-2xl border-2 border-gray-200">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2 text-sm">Nome *</label>
-                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2 text-sm">Cognome *</label>
-                        <input type="text" name="cognome" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2 text-sm">Email *</label>
-                        <input type="email" name="email-address" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-medium mb-2 text-sm">Cellulare *</label>
-                        <input type="tel" name="cellulare" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <label class="block text-gray-700 font-medium mb-2 text-sm">Trasmissione di interesse *</label>
-                    <select name="programma-tv" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
-                        <option value="">Seleziona trasmissione...</option>
-                        <option value="pets">PETS - Animali del Cuore</option>
-                        <option value="jack">Stasera a letto tardi</option>
-                        <option value="arl">Da Noi.. A Ruota Libera</option>
-                        <option value="cast">Casting figuranti</option>
-                        <option value="altro">Altro</option>
-                    </select>
-                </div>
-                
-                <div class="mb-8">
-                    <label class="block text-gray-700 font-medium mb-2 text-sm">Messaggio</label>
-                    <textarea name="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition resize-none"></textarea>
+
+            <!-- Box Candidatura -->
+            <div class="mb-12 bg-gradient-to-br from-blue-500 to-blue-700 p-8 md:p-10 rounded-2xl text-white border-2 border-blue-800">
+                <div class="text-center mb-8">
+                    <i class="fas fa-star text-yellow-300 text-5xl mb-4"></i>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-3">Vuoi candidarti?</h3>
+                    <p class="text-blue-100 text-lg mb-6">Invia la tua candidatura tramite WhatsApp o Email con i seguenti dati:</p>
                 </div>
 
-                <!-- Privacy notice -->
-                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
-                    <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
-                    I tuoi dati saranno trattati secondo il <a href="privacy-policy-ue.html" class="text-blue-600 hover:underline font-medium">GDPR</a>. Inviando il form accetti i nostri <a href="termini-e-condizioni.html" class="text-blue-600 hover:underline font-medium">Termini e Condizioni</a>.
-                </div>
-                
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition border-2 border-blue-700">
-                    <i class="fas fa-paper-plane mr-2"></i> Invia Candidatura
-                </button>
-            </form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/30">
+                        <h4 class="font-bold text-lg mb-4 flex items-center">
+                            <i class="fas fa-list-check text-yellow-300 mr-3"></i>Dati Richiesti
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-300 mr-2 mt-1"></i>
+                                <span>Cognome e Nome</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-300 mr-2 mt-1"></i>
+                                <span>Data e Luogo di nascita</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-300 mr-2 mt-1"></i>
+                                <span>Codice Fiscale</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-300 mr-2 mt-1"></i>
+                                <span>Recapito telefonico</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-300 mr-2 mt-1"></i>
+                                <span><strong>Foto primo piano</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-300 mr-2 mt-1"></i>
+                                <span><strong>Foto figura intera</strong></span>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="mt-12 text-center bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
-                <p class="text-gray-600 mb-3">Preferisci contattarci direttamente?</p>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/30">
+                        <h4 class="font-bold text-lg mb-4 flex items-center">
+                            <i class="fas fa-paper-plane text-yellow-300 mr-3"></i>Come Inviarla
+                        </h4>
+                        <div class="space-y-4">
+                            <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="block bg-green-500 hover:bg-green-600 text-white p-4 rounded-lg transition font-semibold text-center">
+                                <i class="fab fa-whatsapp text-2xl mr-2"></i>
+                                Candidati via WhatsApp
+                            </a>
+                            <a href="mailto:info@pubblico.tv?subject=Candidatura Pubblico TV" class="block bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 text-white p-4 rounded-lg transition font-semibold text-center">
+                                <i class="fas fa-envelope text-xl mr-2"></i>
+                                Candidati via Email
+                            </a>
+                        </div>
+                        <p class="text-xs text-blue-100 mt-4 text-center">
+                            <i class="fas fa-phone mr-1"></i>Sarai contattato telefonicamente per la conferma
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center text-sm text-blue-100">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Indica nel messaggio la trasmissione di tuo interesse
+                </div>
+            </div>
+
+            <!-- Form Informazioni Generiche -->
+            <div class="bg-gray-50 p-8 md:p-10 rounded-2xl border-2 border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Richiedi Informazioni</h3>
+                <p class="text-center text-gray-600 mb-6 text-sm">Hai domande generali? Compila il form e ti risponderemo al più presto</p>
+                
+                <form id="fs-frm" name="pubblicotv-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvonbaey" method="post">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2 text-sm">Nome *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2 text-sm">Cognome *</label>
+                            <input type="text" name="cognome" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2 text-sm">Email *</label>
+                            <input type="email" name="email-address" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2 text-sm">Cellulare</label>
+                            <input type="tel" name="cellulare" class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2 text-sm">Oggetto</label>
+                        <select name="oggetto" class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                            <option value="">Seleziona oggetto...</option>
+                            <option value="info-generali">Informazioni Generali</option>
+                            <option value="info-trasmissione">Informazioni su Trasmissione</option>
+                            <option value="collaborazioni">Collaborazioni</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2 text-sm">Messaggio *</label>
+                        <textarea name="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-white border-2 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition resize-none"></textarea>
+                    </div>
+
+                    <!-- Privacy notice -->
+                    <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200 text-sm text-gray-700">
+                        <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
+                        I tuoi dati saranno trattati secondo il <a href="privacy-policy-ue.html" class="text-blue-600 hover:underline font-medium">GDPR</a>. Inviando il form accetti i nostri <a href="termini-e-condizioni.html" class="text-blue-600 hover:underline font-medium">Termini e Condizioni</a>.
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition border-2 border-blue-700">
+                        <i class="fas fa-paper-plane mr-2"></i> Invia Richiesta
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-8 text-center bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
+                <p class="text-gray-600 mb-3">Oppure scrivici direttamente:</p>
                 <a href="mailto:info@pubblico.tv" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition text-lg">
                     <i class="fas fa-envelope mr-2"></i> info@pubblico.tv
                 </a>
@@ -1012,6 +1107,34 @@
                     });
                 }
             });
+        });
+
+        // FAQ Accordion Toggle
+        function toggleFaq(element) {
+            const faqItem = element.closest('.faq-item');
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = faqItem.querySelector('.faq-icon');
+            
+            // Toggle current FAQ
+            const isActive = answer.classList.contains('active');
+            
+            if (isActive) {
+                answer.classList.remove('active');
+                icon.classList.remove('rotate');
+                faqItem.style.borderColor = '#e5e7eb';
+            } else {
+                answer.classList.add('active');
+                icon.classList.add('rotate');
+                faqItem.style.borderColor = '#3b82f6';
+            }
+        }
+
+        // Open first FAQ by default on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstFaq = document.querySelector('.faq-item');
+            if (firstFaq) {
+                firstFaq.style.borderColor = '#3b82f6';
+            }
         });
     </script>
 </body>
