@@ -110,8 +110,9 @@ html {
        top: 0; left: 0; right: 0; bottom: 0;
        background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(37, 99, 235, 0.8) 100%);
    }
+   ============================================ */
 
-/* Pattern CSS per Hero - Tema TV 
+/* Pattern CSS per Hero - Tema TV */
 .hero-pattern {
     background-color: #1e3a8a;
     background-image: 
@@ -145,22 +146,6 @@ html {
     bottom: 0;
     background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(37, 99, 235, 0.9) 100%);
 }
-
-   ============================================ */
-
-   .hero-pattern {
-       background-image: url('images/christmas-card-01.jpg');
-       background-size: cover;
-       background-position: center;
-       position: relative;
-   }
-   
-   .hero-pattern::before {
-       content: '';
-       position: absolute;
-       top: 0; left: 0; right: 0; bottom: 0;
-       background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(37, 99, 235, 0.8) 100%);
-   }
 
 .hero-content {
     position: relative;
@@ -388,6 +373,83 @@ html {
 
 .faq-icon.rotate {
     transform: rotate(180deg);
+}
+
+/* Lightbox Modal per Gallery */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #3b82f6;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.lightbox-nav:hover {
+    background: rgba(59, 130, 246, 0.8);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
 }
 
 .legal-content table td {
