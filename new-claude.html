@@ -27,7 +27,7 @@
     <meta name="facebook-domain-verification" content="4xps5kqe2nbhoc54g8hepoqamc1q9w" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50">
 
@@ -450,16 +450,31 @@
             </div>
             
             <!-- Grid Gallery -->
+            <!-- 
+                COME SOSTITUIRE I PLACEHOLDER CON IMMAGINI REALI:
+                
+                1. Carica le foto nella cartella: images/gallery/
+                2. Dimensione consigliata: 600x600px (quadrate)
+                3. Formato: JPG o PNG
+                4. Nomi file: foto-1.jpg, foto-2.jpg, ecc.
+                
+                5. Sostituisci TUTTO il div con classe "img-placeholder" con:
+                   <img src="images/gallery/foto-1.jpg" alt="Pubblico in studio" class="w-full h-full object-cover">
+                
+                Esempio completo:
+                PRIMA (placeholder):
+                <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                    <div class="text-center">...</div>
+                </div>
+                
+                DOPO (immagine reale):
+                <img src="images/gallery/foto-1.jpg" alt="Pubblico in studio Da Noi A Ruota Libera" class="w-full h-full object-cover">
+            -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 
                 <!-- Gallery Item 1 -->
                 <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square">
-                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
-                        <div class="text-center">
-                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
-                            <div class="text-xs text-gray-600 px-2">Foto 1<br/>600x600px</div>
-                        </div>
-                    </div>
+					<img src="images/gallery/foto-1.jpg" alt="Pubblico in studio Da Noi A Ruota Libera" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
                         <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
                     </div>
