@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pubblico TV - Partecipa alle trasmissioni televisive</title>
+    <meta name="Description" content="Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive in onda? Pubblico TV gestisce pubblico per i maggiori canali italiani." />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+    <link rel="canonical" href="https://www.pubblico.tv" />
+    <meta property="og:title" content="Pubblico TV" />
+    <meta property="og:description" content="Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive in onda? Pubblico TV gestisce pubblico per i maggiori canali italiani." />
+    <meta property="og:url" content="https://www.pubblico.tv" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:image" content="https://www.pubblico.tv/images/logo-pubblicotv-ig-post.png" />
+    <meta property="og:image:width" content="692" />
+    <meta property="og:image:height" content="692" />
+    <meta property="og:image:alt" content="logo Pubblico TV" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pubblico TV" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pubblico TV" />
+    <meta name="twitter:description" content="Vuoi partecipare come pubblico in studio alle principali trasmissioni televisive in onda? Pubblico TV gestisce pubblico per i maggiori canali italiani." />
+    <meta name="twitter:image" content="https://www.pubblico.tv/images/logo-pubblicotv-ig-post.png" />
+    <meta name="twitter:label1" content="Tempo di lettura" />
+    <meta name="twitter:data1" content="1 minuto" />
+    <meta name="facebook-domain-verification" content="4xps5kqe2nbhoc54g8hepoqamc1q9w" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation minimale -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <svg width="38" height="30" viewBox="0 0 38 30" xmlns="http://www.w3.org/2000/svg" aria-label="Pubblico.TV logo">
+                      <defs><clipPath id="nav-bands"><rect x="0" y="0" width="38" height="10" rx="3"/></clipPath></defs>
+                      <rect x="0" y="10" width="38" height="20" rx="4" fill="#185FA5"/>
+                      <rect x="0" y="0"  width="38" height="11" rx="3" fill="#0C447C"/>
+                      <g clip-path="url(#nav-bands)">
+                        <line x1="6"  y1="-1" x2="0"  y2="11" stroke="white" stroke-width="3"/>
+                        <line x1="12" y1="-1" x2="6"  y2="11" stroke="white" stroke-width="3"/>
+                        <line x1="18" y1="-1" x2="12" y2="11" stroke="white" stroke-width="3"/>
+                        <line x1="24" y1="-1" x2="18" y2="11" stroke="white" stroke-width="3"/>
+                        <line x1="30" y1="-1" x2="24" y2="11" stroke="white" stroke-width="3"/>
+                        <line x1="36" y1="-1" x2="30" y2="11" stroke="white" stroke-width="3"/>
+                        <line x1="42" y1="-1" x2="36" y2="11" stroke="white" stroke-width="3"/>
+                      </g>
+                      <rect x="6"  y="-3" width="5" height="4" rx="1" fill="#0C447C"/>
+                      <rect x="16" y="-3" width="5" height="4" rx="1" fill="#0C447C"/>
+                      <rect x="26" y="-3" width="5" height="4" rx="1" fill="#0C447C"/>
+                      <circle cx="7"  cy="22" r="3.5" fill="#E24B4A"/>
+                      <circle cx="7"  cy="22" r="1.8" fill="#F7C1C1"/>
+                      <line x1="15" y1="17" x2="35" y2="17" stroke="white" stroke-width="1.2" opacity="0.4"/>
+                      <line x1="15" y1="22" x2="35" y2="22" stroke="white" stroke-width="1.2" opacity="0.4"/>
+                      <line x1="15" y1="27" x2="28" y2="27" stroke="white" stroke-width="1.2" opacity="0.4"/>
+                    </svg>
+                    <span class="text-xl font-bold text-gray-900">Pubblico<span class="text-blue-600">.</span><span class="text-blue-600">TV</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Home</a>
+                    <a href="#trasmissioni" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Trasmissioni</a>
+                    <a href="#chi-siamo" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Chi Siamo</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Portfolio</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Gallery</a>
+                    <a href="#clienti" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">Clienti</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 transition font-medium text-sm">FAQ</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Home</a>
+                <a href="#trasmissioni" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Trasmissioni</a>
+                <a href="#chi-siamo" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Chi Siamo</a>
+                <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Portfolio</a>
+                <a href="#gallery" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Gallery</a>
+                <a href="#clienti" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">Clienti</a>
+                <a href="#faq" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded text-sm">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section minimale -->
+    <section id="home" class="hero-pattern pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto text-center hero-content fade-in">
+            <div class="inline-block mb-4">
+                <span class="text-xs font-semibold tracking-wider text-white uppercase bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
+                    <i class="fas fa-shield-alt mr-2"></i>Operatore Indipendente dal 2010
+                </span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+                Diventa la Stella<br/>della TV Italiana
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-4 max-w-2xl mx-auto drop-shadow">
+                Partecipa come pubblico in studio ai programmi più seguiti.
+            </p>
+            <p class="text-base text-white font-medium mb-8 drop-shadow">
+                Un'esperienza unica, dietro le quinte dello spettacolo.
+            </p>
+
+            <!-- AVVISO PROGRAMMI NON GESTITI -->
+            <div class="max-w-3xl mx-auto mb-10 bg-white/10 backdrop-blur-sm border-2 border-yellow-400/70 rounded-2xl p-6 text-left shadow-lg">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mt-0.5">
+                        <i class="fas fa-exclamation-triangle text-yellow-900 text-sm"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-bold text-base md:text-lg mb-2">
+                            Attenzione: programmi che <span class="text-yellow-300">NON</span> gestiamo
+                        </h2>
+                        <p class="text-blue-100 text-sm mb-4 leading-relaxed">
+                            Riceviamo molte richieste per programmi che <strong class="text-white">non sono sotto la nostra gestione</strong>. Le candidature per i programmi elencati qui sotto <strong class="text-yellow-300">non verranno prese in considerazione</strong>, poiché non abbiamo alcun ruolo nella selezione del loro pubblico.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="inline-flex items-center px-3 py-1 bg-white/10 border border-white/30 text-white text-xs font-medium rounded-full">
+                                <i class="fas fa-times-circle text-red-400 mr-1.5"></i>L'Eredità
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 bg-white/10 border border-white/30 text-white text-xs font-medium rounded-full">
+                                <i class="fas fa-times-circle text-red-400 mr-1.5"></i>La Ruota della Fortuna
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 bg-white/10 border border-white/30 text-white text-xs font-medium rounded-full">
+                                <i class="fas fa-times-circle text-red-400 mr-1.5"></i>Stasera tutto è possibile
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 bg-white/10 border border-white/30 text-white text-xs font-medium rounded-full">
+                                <i class="fas fa-times-circle text-red-400 mr-1.5"></i>[Programma segnaposto]
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 bg-white/10 border border-white/30 text-white text-xs font-medium rounded-full">
+                                <i class="fas fa-times-circle text-red-400 mr-1.5"></i>[Programma segnaposto]
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm">
+                            <i class="fas fa-check-circle text-green-400 flex-shrink-0"></i>
+                            <span class="text-blue-100">Gestiamo esclusivamente i programmi elencati in questa pagina: <a href="#trasmissioni" class="text-yellow-300 font-semibold hover:text-yellow-200 transition underline underline-offset-2">scopri le trasmissioni attive →</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="#trasmissioni" class="px-8 py-3 bg-white hover:bg-blue-50 text-blue-600 rounded-full font-semibold transition inline-flex items-center shadow-lg">
+                    Scopri le Opportunità <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 rounded-full font-semibold transition inline-flex items-center">
+                    <i class="fab fa-whatsapp mr-2 text-sm"></i> Scrivici su WhatsApp
+                </a>
+            </div>
+
+            <!-- Social media minimale -->
+            <div class="flex justify-center space-x-4">
+                <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white hover:text-green-500 transition text-white" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/romapubblicotv" class="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white hover:text-blue-600 transition text-white" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/pubblico.roma" class="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white hover:text-pink-500 transition text-white" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/romapubblicotv" class="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white hover:text-sky-500 transition text-white" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trasmissioni Section -->
+    <section id="trasmissioni" class="py-20 px-4 bg-amber-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Trasmissioni Attive</h2>
+                <p class="text-lg text-gray-600">I programmi che gestiamo direttamente e in esclusiva</p>
+            </div>
+            
+            <!-- Card Da Noi A Ruota Libera — full width -->
+            <div class="bg-white rounded-2xl border-2 border-yellow-300 overflow-hidden card-hover mb-8 shadow-sm">
+                <div class="md:flex">
+                    <div class="md:w-2/5 rect-img img-placeholder" style="min-height:220px;">
+                        <div class="text-center p-4">
+                            <i class="fas fa-tv text-blue-500 text-5xl mb-2"></i>
+                            <div class="text-xs text-gray-500">Inserisci immagine:<br/>800x500px<br/>a-ruota-libera.jpg</div>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded-full">
+                                <i class="fas fa-star mr-1"></i>GESTIONE ESCLUSIVA
+                            </span>
+                            <span class="text-xs text-gray-500 font-medium">RAI 1</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Da Noi… A Ruota Libera</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600 mb-5">
+                            <p><i class="fas fa-users text-blue-500 w-5"></i> <strong>Solo maggiorenni</strong></p>
+                            <p><i class="fas fa-calendar text-blue-500 w-5"></i> Tutte le domeniche</p>
+                            <p><i class="fas fa-clock text-blue-500 w-5"></i> Ore 15:15–18:45</p>
+                            <p><i class="fas fa-map-marker-alt text-blue-500 w-5"></i> Roma – Studio RAI</p>
+                            <p><i class="fas fa-ticket-alt text-green-500 w-5"></i> <strong class="text-green-600">Ingresso gratuito</strong></p>
+                            <p><i class="fas fa-info-circle text-blue-500 w-5"></i> Disponibilità limitata</p>
+                        </div>
+                        <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="self-start px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold text-sm transition inline-flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>Candidati ora
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TV 2000 block -->
+            <div class="bg-white rounded-2xl border-2 border-yellow-300 overflow-hidden shadow-sm mb-8">
+                <div class="p-6 md:p-8 border-b border-yellow-100">
+                    <div class="flex flex-wrap items-center gap-3 mb-1">
+                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded-full">
+                            <i class="fas fa-star mr-1"></i>GESTIONE ESCLUSIVA
+                        </span>
+                        <h3 class="text-2xl font-bold text-gray-900">TV 2000 — Casting sempre aperto</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2">Gestiamo in esclusiva il pubblico di tutti i programmi TV 2000. Il casting è <strong>costantemente aperto</strong>: puoi candidarti in qualsiasi momento.</p>
+                </div>
+                <div class="p-6 md:p-8 flex flex-wrap items-center gap-3">
+                    <span class="inline-block px-3 py-1.5 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
+                        <i class="fas fa-circle text-green-500 mr-1" style="font-size:8px;vertical-align:middle;"></i>Casting aperto
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 border border-yellow-200 text-gray-700 text-sm font-medium rounded-full"><i class="fas fa-sun text-orange-400 text-xs"></i>Di buon mattino</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 border border-yellow-200 text-gray-700 text-sm font-medium rounded-full"><i class="fas fa-cloud-sun text-yellow-500 text-xs"></i>L'ora solare</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 border border-yellow-200 text-gray-700 text-sm font-medium rounded-full"><i class="fas fa-hands-helping text-blue-400 text-xs"></i>Siamo noi</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 border border-yellow-200 text-gray-700 text-sm font-medium rounded-full"><i class="fas fa-cross text-purple-400 text-xs"></i>Chiesa viva</span>
+                </div>
+                <div class="px-6 md:px-8 py-4 bg-amber-50 border-t border-yellow-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-sm text-gray-600"><i class="fas fa-info-circle text-blue-500 mr-2"></i>Indica nel messaggio il programma di tuo interesse.</p>
+                    <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="flex-shrink-0 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold text-sm transition inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>Candidati ora
+                    </a>
+                </div>
+            </div>
+
+            <!-- Banner figuranti -->
+            <div class="bg-gradient-to-r from-slate-700 to-slate-900 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+                <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-film text-white text-2xl"></i>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h3 class="text-white font-bold text-lg mb-1">Selezione Figuranti — ricerca sempre attiva</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Siamo costantemente alla ricerca di figuranti per produzioni televisive e cinematografiche. <strong class="text-white">Candidature aperte tutto l'anno</strong>, anche senza esperienza pregressa. Solo maggiorenni, con disponibilità continuativa a Roma.</p>
+                </div>
+                <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="flex-shrink-0 px-6 py-3 bg-white hover:bg-gray-100 text-slate-900 rounded-full font-semibold text-sm transition inline-flex items-center shadow">
+                    <i class="fab fa-whatsapp mr-2 text-green-600"></i>Invia la tua candidatura
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chi Siamo -->
+    <section id="chi-siamo" class="py-20 px-4 chi-siamo-pattern">
+        <div class="max-w-6xl mx-auto section-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-blue-600 uppercase bg-white px-4 py-2 rounded-full inline-block mb-6">
+                        <i class="fas fa-star mr-2"></i>Chi Siamo
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">La Tua Porta d'Accesso al Mondo TV</h2>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        <strong>Pubblico TV</strong> è un <strong>operatore indipendente</strong> che dal 2010 rappresenta il punto di riferimento per chi vuole vivere l'emozione della televisione da protagonista. Non siamo affiliati a produzioni o emittenti: siamo il ponte tra te e lo spettacolo.
+                    </p>
+                    <p class="text-base text-gray-600 mb-6 leading-relaxed">
+                        Il nostro team seleziona e coordina migliaia di partecipanti ogni anno, garantendo accessi controllati e sicuri agli studi televisivi. Collaboriamo con le principali produzioni nazionali per creare esperienze uniche e memorabili.
+                    </p>
+                    
+                    <!-- Badge distintivi -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-gray-200">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-shield-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-sm text-gray-900">Indipendenti</div>
+                                <div class="text-xs text-gray-600">No affiliazioni</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-gray-200">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-lock text-green-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-sm text-gray-900">Privacy GDPR</div>
+                                <div class="text-xs text-gray-600">Dati protetti</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="text-center p-4 bg-white rounded-xl border border-gray-200">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">10+</div>
+                            <div class="text-xs text-gray-600 uppercase">Anni</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl border border-gray-200">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">50+</div>
+                            <div class="text-xs text-gray-600 uppercase">Programmi</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl border border-gray-200">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">10k+</div>
+                            <div class="text-xs text-gray-600 uppercase">Persone</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-blue-600 p-8 md:p-10 rounded-2xl text-white border-2 border-blue-700">
+                        <div class="text-5xl mb-6 opacity-20"><i class="fas fa-quote-left"></i></div>
+                        <p class="text-xl mb-6 leading-relaxed">
+                            Creiamo esperienze indimenticabili per ogni persona che partecipa ai nostri programmi. La tua emozione è il nostro successo.
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/20 rounded-full mr-4 flex items-center justify-center">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Il Team</div>
+                                <div class="text-sm opacity-80">Pubblico TV</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4 bg-purple-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">I Nostri Programmi</h2>
+                <p class="text-lg text-gray-600">Una storia di successi e collaborazioni prestigiose</p>
+            </div>
+            
+            <!-- Programmi in Esclusiva -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2 text-center">
+                    <i class="fas fa-star text-yellow-500 mr-2"></i>Gestione Diretta ed Esclusiva
+                </h3>
+                <p class="text-center text-gray-600 mb-8">Programmi che gestiamo direttamente dall'inizio alla fine</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Da Noi A Ruota Libera -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-yellow-300 hover:border-yellow-400 transition shadow-sm">
+                        <div class="mb-4"><div class="rect-img-portfolio img-placeholder"><i class="fas fa-tv text-blue-500 text-3xl"></i></div></div>
+                        <div class="text-center">
+                            <span class="inline-block px-2 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded-full mb-2">ESCLUSIVA</span>
+                            <h3 class="font-semibold text-sm text-gray-900 mb-1">Da Noi... A Ruota Libera</h3>
+                            <p class="text-xs text-gray-500">RAI 1</p>
+                        </div>
+                    </div>
+
+                    <!-- TV 2000 -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-yellow-300 hover:border-yellow-400 transition shadow-sm">
+                        <div class="mb-4"><div class="rect-img-portfolio img-placeholder"><i class="fas fa-cross text-purple-600 text-3xl"></i></div></div>
+                        <div class="text-center">
+                            <span class="inline-block px-2 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded-full mb-2">ESCLUSIVA</span>
+                            <h3 class="font-semibold text-sm text-gray-900 mb-1">TV 2000</h3>
+                            <p class="text-xs text-gray-500">Di buon mattino · L'ora solare · Siamo noi · Chiesa viva</p>
+                        </div>
+                    </div>
+
+                    <!-- Stasera a Letto Tardi -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-yellow-300 hover:border-yellow-400 transition shadow-sm">
+                        <div class="mb-4"><div class="rect-img-portfolio img-placeholder"><i class="fas fa-moon text-indigo-400 text-3xl"></i></div></div>
+                        <div class="text-center">
+                            <span class="inline-block px-2 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded-full mb-2">ESCLUSIVA</span>
+                            <h3 class="font-semibold text-sm text-gray-900 mb-1">Stasera a Letto Tardi</h3>
+                            <p class="text-xs text-gray-500">Comedy Show</p>
+                        </div>
+                    </div>
+
+                    <!-- PETS -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-yellow-300 hover:border-yellow-400 transition shadow-sm">
+                        <div class="mb-4"><div class="rect-img-portfolio img-placeholder"><i class="fas fa-paw text-pink-500 text-3xl"></i></div></div>
+                        <div class="text-center">
+                            <span class="inline-block px-2 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded-full mb-2">ESCLUSIVA</span>
+                            <h3 class="font-semibold text-sm text-gray-900 mb-1">PETS – Animali del Cuore</h3>
+                            <p class="text-xs text-gray-500">TV8</p>
+                        </div>
+                    </div>
+
+                    <!-- Figuranti -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-slate-300 hover:border-slate-400 transition shadow-sm">
+                        <div class="mb-4"><div class="rect-img-portfolio img-placeholder"><i class="fas fa-film text-slate-500 text-3xl"></i></div></div>
+                        <div class="text-center">
+                            <span class="inline-block px-2 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full mb-2">SEMPRE ATTIVO</span>
+                            <h3 class="font-semibold text-sm text-gray-900 mb-1">Selezione Figuranti</h3>
+                            <p class="text-xs text-gray-500">TV &amp; Cinema · Roma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaborazioni Esterne -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2 text-center">
+                    <i class="fas fa-handshake text-blue-500 mr-2"></i>Collaborazioni Esterne
+                </h3>
+                <p class="text-center text-gray-600 mb-8">Programmi per i quali abbiamo fornito il pubblico</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Collaborazione 1 -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 transition">
+                        <div class="mb-4">
+                            <div class="rect-img-portfolio img-placeholder">
+                                <i class="fas fa-music text-blue-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-900 mb-1 text-center">Talent Show</h3>
+                        <p class="text-xs text-gray-500 text-center">Vari Network</p>
+                    </div>
+
+                    <!-- Collaborazione 2 -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 transition">
+                        <div class="mb-4">
+                            <div class="rect-img-portfolio img-placeholder">
+                                <i class="fas fa-gamepad text-green-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-900 mb-1 text-center">Quiz Show</h3>
+                        <p class="text-xs text-gray-500 text-center">Prime Time</p>
+                    </div>
+
+                    <!-- Collaborazione 3 -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 transition">
+                        <div class="mb-4">
+                            <div class="rect-img-portfolio img-placeholder">
+                                <i class="fas fa-microphone text-indigo-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-900 mb-1 text-center">Talk Show</h3>
+                        <p class="text-xs text-gray-500 text-center">Nazionali</p>
+                    </div>
+
+                    <!-- Collaborazione 4 -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 transition">
+                        <div class="mb-4">
+                            <div class="rect-img-portfolio img-placeholder">
+                                <i class="fas fa-film text-orange-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-900 mb-1 text-center">Reality Show</h3>
+                        <p class="text-xs text-gray-500 text-center">Produzioni TV</p>
+                    </div>
+
+                    <!-- Collaborazione 5 -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 transition">
+                        <div class="mb-4">
+                            <div class="rect-img-portfolio img-placeholder">
+                                <i class="fas fa-trophy text-yellow-600 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-900 mb-1 text-center">Eventi Speciali</h3>
+                        <p class="text-xs text-gray-500 text-center">Gala & Awards</p>
+                    </div>
+
+                    <!-- Collaborazione 6 -->
+                    <div class="bg-white p-4 rounded-xl border-2 border-gray-200 hover:border-blue-300 transition">
+                        <div class="mb-4">
+                            <div class="rect-img-portfolio img-placeholder">
+                                <i class="fas fa-video text-red-500 text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-900 mb-1 text-center">Fiction TV</h3>
+                        <p class="text-xs text-gray-500 text-center">Serie & Film</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-4 bg-orange-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
+                    <i class="fas fa-camera text-orange-500 mr-3"></i>I Nostri Momenti
+                </h2>
+                <p class="text-lg text-gray-600">Il pubblico protagonista: emozioni, sorrisi e ricordi indimenticabili</p>
+            </div>
+            
+            <!-- Grid Gallery -->
+            <!-- 
+                COME SOSTITUIRE I PLACEHOLDER CON IMMAGINI REALI:
+                
+                1. Carica le foto nella cartella: images/gallery/
+                2. Dimensione consigliata: 600x600px (quadrate)
+                3. Formato: JPG o PNG
+                4. Nomi file: foto-1.jpg, foto-2.jpg, ecc.
+                
+                5. Sostituisci TUTTO il div con classe "img-placeholder" con:
+                   <img src="images/gallery/foto-1.jpg" alt="Pubblico in studio" class="w-full h-full object-cover">
+                
+                Esempio completo:
+                PRIMA (placeholder):
+                <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                    <div class="text-center">...</div>
+                </div>
+                
+                DOPO (immagine reale):
+                <img src="images/gallery/foto-1.jpg" alt="Pubblico in studio Da Noi A Ruota Libera" class="w-full h-full object-cover">
+            -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(0)">
+                    <img src="images/gallery/foto-1.jpg" alt="Pubblico in studio Da Noi A Ruota Libera" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(1)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 2<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(2)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 3<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(3)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 4<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(4)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 5<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(5)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 6<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(6)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 7<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(7)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 8<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(8)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 9<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(9)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 10<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(10)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 11<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="group relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-orange-400 transition cursor-pointer aspect-square" onclick="openLightbox(11)">
+                    <div class="w-full h-full img-placeholder bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div class="text-center">
+                            <i class="fas fa-image text-orange-400 text-4xl mb-2"></i>
+                            <div class="text-xs text-gray-600 px-2">Foto 12<br/>600x600px</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Box -->
+            <div class="mt-12 bg-white p-8 rounded-2xl border-2 border-orange-200 text-center">
+                <i class="fas fa-smile-beam text-orange-500 text-5xl mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">Vuoi essere anche tu protagonista?</h3>
+                <p class="text-gray-600 mb-6">Invia la tua candidatura via WhatsApp o Email con foto e dati completi!</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="inline-block px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Candidati via WhatsApp
+                    </a>
+                    <a href="#trasmissioni" class="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold transition">
+                        <i class="fas fa-tv mr-2"></i>Vedi i Programmi Attivi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clienti Section -->
+    <section id="clienti" class="py-20 px-4 clienti-pattern">
+        <div class="max-w-6xl mx-auto section-content">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">I Nostri Clienti</h2>
+                <p class="text-lg text-gray-600">Collaboriamo con le più importanti reti televisive italiane</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+                <!-- RAI -->
+                <div class="bg-white p-6 rounded-xl border-2 border-gray-200 flex items-center justify-center hover:border-blue-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-1">RAI</div>
+                        <div class="text-xs text-gray-500">Radiotelevisione</div>
+                    </div>
+                </div>
+
+                <!-- Mediaset -->
+                <div class="bg-white p-6 rounded-xl border-2 border-gray-200 flex items-center justify-center hover:border-red-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-red-600 mb-1">MEDIASET</div>
+                        <div class="text-xs text-gray-500">Network</div>
+                    </div>
+                </div>
+
+                <!-- Sky -->
+                <div class="bg-white p-6 rounded-xl border-2 border-gray-200 flex items-center justify-center hover:border-cyan-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-cyan-600 mb-1">SKY</div>
+                        <div class="text-xs text-gray-500">Sky Italia</div>
+                    </div>
+                </div>
+
+                <!-- TV 2000 -->
+                <div class="bg-white p-6 rounded-xl border-2 border-gray-200 flex items-center justify-center hover:border-purple-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-purple-600 mb-1">TV 2000</div>
+                        <div class="text-xs text-gray-500">Nazionale</div>
+                    </div>
+                </div>
+
+                <!-- La7 -->
+                <div class="bg-white p-6 rounded-xl border-2 border-gray-200 flex items-center justify-center hover:border-green-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 mb-1">La7</div>
+                        <div class="text-xs text-gray-500">Cairo Group</div>
+                    </div>
+                </div>
+
+                <!-- NOVE -->
+                <div class="bg-white p-6 rounded-xl border-2 border-gray-200 flex items-center justify-center hover:border-orange-400 hover:shadow-md transition">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-orange-600 mb-1">NOVE</div>
+                        <div class="text-xs text-gray-500">Discovery</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="bg-white p-8 rounded-2xl border-2 border-gray-200">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1"><i class="fas fa-handshake mr-2"></i>6+</div>
+                        <div class="text-xs text-gray-600 uppercase">Network Partner</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1"><i class="fas fa-tv mr-2"></i>50+</div>
+                        <div class="text-xs text-gray-600 uppercase">Programmi Attivi</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1"><i class="fas fa-users mr-2"></i>10k+</div>
+                        <div class="text-xs text-gray-600 uppercase">Partecipanti/Anno</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600 mb-1"><i class="fas fa-star mr-2"></i>98%</div>
+                        <div class="text-xs text-gray-600 uppercase">Soddisfazione</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Domande Frequenti</h2>
+                <p class="text-lg text-gray-600">Tutto quello che devi sapere prima di partecipare</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Pubblico TV è affiliato alle emittenti televisive?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        No, siamo un <strong>operatore indipendente</strong>. Non siamo affiliati o collegati a nessuna produzione, redazione, canale o emittente televisiva. Lavoriamo come intermediari professionisti tra il pubblico e le produzioni TV.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Come vengono gestiti i miei dati personali?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        I tuoi dati sono trattati in conformità al <strong>GDPR</strong> (Regolamento UE 679/2016). Li raccogliamo esclusivamente per gestire la tua partecipazione e garantire <strong>accessi controllati e sicuri</strong> agli studi televisivi. Non vengono diffusi pubblicamente. <a href="privacy-policy-ue.html" class="text-blue-600 hover:underline">Leggi la Privacy Policy completa</a>.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Posso cancellare o modificare la mia partecipazione?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        Se per motivi personali non puoi più partecipare, ti chiediamo di avvisarci <strong>con almeno 48 ore di anticipo</strong> via email o telefono. Questo ci permette di gestire al meglio le disponibilità. In caso di modifica delle date da parte della produzione, ti avviseremo immediatamente.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Cosa significa "ingresso gratuito" vs "con rimborso"?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        <strong>Ingresso gratuito</strong>: partecipi alla trasmissione senza alcun costo, previa prenotazione confermata.<br><br>
+                        <strong>Con rimborso</strong>: ricevi un compenso per la tua presenza (l'importo varia in base al programma). In alcuni casi include anche il cestino pranzo.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Cosa devo portare il giorno della registrazione?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        <strong>Documento d'identità valido</strong> (obbligatorio per accesso sicurezza), conferma della prenotazione (email/SMS) e abbigliamento adeguato come indicato nella conferma. Per i minorenni è necessaria l'autorizzazione dei genitori.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item bg-white p-6 rounded-xl border-2 border-gray-200">
+                    <div class="faq-question flex items-start justify-between">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-question-circle text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            Come funziona la prenotazione?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        Invia la tua candidatura via <strong>WhatsApp o Email</strong> con i dati richiesti (nome, data di nascita, codice fiscale, recapito telefonico e due foto). Sarai <strong>contattato telefonicamente</strong> dal nostro staff per conferma, dettagli logistici e risposta a eventuali domande. La prenotazione è confermata solo dopo il contatto telefonico.
+                    </div>
+                </div>
+                <!-- FAQ 7 - Programmi non gestiti -->
+                <div class="faq-item bg-red-50 p-6 rounded-xl border-2 border-red-200">
+                    <div class="faq-question flex items-start justify-between">
+                        <h3 class="font-bold text-lg text-gray-900 flex items-start flex-1 pr-4">
+                            <i class="fas fa-ban text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                            Gestite il pubblico de L'Eredità, La Ruota della Fortuna, Stasera tutto è possibile o altri programmi RAI/Mediaset?
+                        </h3>
+                        <i class="fas fa-chevron-down text-red-500 text-xl faq-icon"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600 ml-8">
+                        <p class="mb-3"><strong>No.</strong> Riceviamo ogni giorno molte richieste per programmi che non gestiamo. Per evitare malintesi, lo diciamo chiaramente: <strong>non abbiamo alcun ruolo</strong> nella selezione del pubblico di trasmissioni come L'Eredità, La Ruota della Fortuna, Stasera tutto è possibile, Reazione a catena, Affari tuoi o altri programmi di rete che non compaiono in questa pagina.</p>
+                        <p class="mb-3">Le candidature per programmi non elencati nella sezione <a href="#trasmissioni" class="text-blue-600 hover:underline font-medium">Trasmissioni Attive</a> <strong>non verranno prese in considerazione</strong> e non riceveranno risposta.</p>
+                        <p>Per partecipare come pubblico a quei programmi, è necessario rivolgersi direttamente alle rispettive produzioni o alle emittenti televisive.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contatti" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Candidati</h2>
+                <p class="text-lg text-gray-600">Inviaci la tua candidatura per i programmi che gestiamo</p>
+            </div>
+
+            <!-- Box Candidatura -->
+            <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-8 md:p-10 rounded-2xl text-white border-2 border-blue-800">
+                <div class="text-center mb-8">
+                    <i class="fas fa-star text-yellow-300 text-5xl mb-4"></i>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-3">Vuoi candidarti?</h3>
+                    <p class="text-blue-100 text-lg mb-6">Invia la tua candidatura tramite WhatsApp o Email con i seguenti dati:</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/30">
+                        <h4 class="font-bold text-lg mb-4 flex items-center">
+                            <i class="fas fa-list-check text-yellow-300 mr-3"></i>Dati Richiesti
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check text-green-300 mr-2 mt-1"></i><span>Cognome e Nome</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-300 mr-2 mt-1"></i><span>Data e Luogo di nascita</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-300 mr-2 mt-1"></i><span>Codice Fiscale</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-300 mr-2 mt-1"></i><span>Recapito telefonico</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-300 mr-2 mt-1"></i><span><strong>Foto primo piano</strong></span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-300 mr-2 mt-1"></i><span><strong>Foto figura intera</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/30">
+                        <h4 class="font-bold text-lg mb-4 flex items-center">
+                            <i class="fas fa-paper-plane text-yellow-300 mr-3"></i>Come Inviarla
+                        </h4>
+                        <div class="space-y-4">
+                            <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="block bg-green-500 hover:bg-green-600 text-white p-4 rounded-lg transition font-semibold text-center">
+                                <i class="fab fa-whatsapp text-2xl mr-2"></i>Candidati via WhatsApp
+                            </a>
+                            <a href="/cdn-cgi/l/email-protection#fb92959d94bb8b8e999997929894d58f8dc4888e99919e988fc6b89a959f929f9a8f8e899adbab8e999997929894dbafad" class="block bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 text-white p-4 rounded-lg transition font-semibold text-center">
+                                <i class="fas fa-envelope text-xl mr-2"></i>Candidati via Email
+                            </a>
+                        </div>
+                        <p class="text-xs text-blue-100 mt-4 text-center">
+                            <i class="fas fa-phone mr-1"></i>Sarai contattato telefonicamente per la conferma
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center text-sm text-blue-100">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Indica nel messaggio la trasmissione di tuo interesse tra quelle che gestiamo
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Gallery Image">
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <svg width="34" height="26" viewBox="0 0 34 26" xmlns="http://www.w3.org/2000/svg">
+                          <defs><clipPath id="ft-bands"><rect x="0" y="0" width="34" height="9" rx="3"/></clipPath></defs>
+                          <rect x="0" y="9"  width="34" height="17" rx="4" fill="#185FA5"/>
+                          <rect x="0" y="0"  width="34" height="10" rx="3" fill="#0C447C"/>
+                          <g clip-path="url(#ft-bands)">
+                            <line x1="5"  y1="-1" x2="0"  y2="10" stroke="white" stroke-width="2.8"/>
+                            <line x1="10" y1="-1" x2="5"  y2="10" stroke="white" stroke-width="2.8"/>
+                            <line x1="15" y1="-1" x2="10" y2="10" stroke="white" stroke-width="2.8"/>
+                            <line x1="20" y1="-1" x2="15" y2="10" stroke="white" stroke-width="2.8"/>
+                            <line x1="25" y1="-1" x2="20" y2="10" stroke="white" stroke-width="2.8"/>
+                            <line x1="30" y1="-1" x2="25" y2="10" stroke="white" stroke-width="2.8"/>
+                            <line x1="35" y1="-1" x2="30" y2="10" stroke="white" stroke-width="2.8"/>
+                          </g>
+                          <rect x="5"  y="-3" width="4" height="4" rx="1" fill="#0C447C"/>
+                          <rect x="14" y="-3" width="4" height="4" rx="1" fill="#0C447C"/>
+                          <rect x="23" y="-3" width="4" height="4" rx="1" fill="#0C447C"/>
+                          <circle cx="6"  cy="20" r="3"   fill="#E24B4A"/>
+                          <circle cx="6"  cy="20" r="1.5" fill="#F7C1C1"/>
+                          <line x1="13" y1="15" x2="31" y2="15" stroke="white" stroke-width="1" opacity="0.4"/>
+                          <line x1="13" y1="20" x2="31" y2="20" stroke="white" stroke-width="1" opacity="0.4"/>
+                          <line x1="13" y1="25" x2="25" y2="25" stroke="white" stroke-width="1" opacity="0.4"/>
+                        </svg>
+                        <span class="text-xl font-bold">Pubblico<span class="text-blue-400">.</span><span class="text-blue-400">TV</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed text-sm">
+                        Operatore indipendente dal 2010. Il tuo partner di fiducia per vivere l'emozione della televisione da protagonista nel cuore dello spettacolo italiano.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://wa.me/message/4ZDYXPKQWUGLI1" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/romapubblicotv" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pubblico.roma" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/romapubblicotv" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-sky-600 transition" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-sm">Link Rapidi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#trasmissioni" class="hover:text-white transition">Trasmissioni</a></li>
+                        <li><a href="#chi-siamo" class="hover:text-white transition">Chi Siamo</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="#clienti" class="hover:text-white transition">Clienti</a></li>
+                        <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 text-sm">Informazioni Legali</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="termini-e-condizioni.html" class="hover:text-white transition">Termini e Condizioni</a></li>
+                        <li><a href="cookie-policy-ue.html" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="privacy-policy-ue.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2023 Pubblico.TV - Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion Toggle
+        function toggleFaq(element) {
+            const faqItem = element.closest('.faq-item');
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = faqItem.querySelector('.faq-icon');
+            
+            // Toggle current FAQ
+            const isActive = answer.classList.contains('active');
+            
+            if (isActive) {
+                answer.classList.remove('active');
+                icon.classList.remove('rotate');
+                faqItem.style.borderColor = '#e5e7eb';
+            } else {
+                answer.classList.add('active');
+                icon.classList.add('rotate');
+                faqItem.style.borderColor = '#3b82f6';
+            }
+        }
+
+        // Aggiungi event listener a tutte le FAQ
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    toggleFaq(this);
+                });
+            });
+        });
+
+        // Gallery Lightbox
+        let currentImageIndex = 0;
+        const galleryImages = [
+            'images/gallery/foto-1.jpg',
+            'images/gallery/foto-2.jpg',
+            'images/gallery/foto-3.jpg',
+            'images/gallery/foto-4.jpg',
+            'images/gallery/foto-5.jpg',
+            'images/gallery/foto-6.jpg',
+            'images/gallery/foto-7.jpg',
+            'images/gallery/foto-8.jpg',
+            'images/gallery/foto-9.jpg',
+            'images/gallery/foto-10.jpg',
+            'images/gallery/foto-11.jpg',
+            'images/gallery/foto-12.jpg'
+        ];
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Se l'immagine non esiste (placeholder), usa un'immagine placeholder o mostra un messaggio
+            lightboxImg.src = galleryImages[index];
+            lightboxImg.onerror = function() {
+                // Se l'immagine non esiste, mostra un messaggio
+                alert('Immagine non ancora disponibile. Carica le tue foto in images/gallery/');
+                closeLightbox();
+            };
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            
+            if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            } else if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            }
+            
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[currentImageIndex];
+        }
+
+        // Chiudi lightbox con ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                changeImage(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeImage(1);
